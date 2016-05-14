@@ -20,10 +20,15 @@ ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-in
 ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-cob-perception-common ros-indigo-moveit-full ros-indigo-geographic-info \
-ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall -y
+ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev ros-indigo-object-recognition-core \
+ros-indigo-object-recognition-capture ros-indigo-object-recognition-reconstruction ros-indigo-object-recognition-linemod \
+ros-indigo-object-recognition-renderer ros-indigo-object-recognition-tabletop ros-indigo-object-recognition-tod \
+ros-indigo-object-recognition-transparent-objects ros-indigo-object-recognition-msgs \
+ros-indigo-object-recognition-ros ros-indigo-object-recognition-ros-visualization \
+ros-indigo-soem -y
 
 # Interface grafic couchapp
-pip install -U couchapp
+sudo pip install -U couchapp
 
 # rosdep
 sudo rosdep init
@@ -39,4 +44,3 @@ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 source ~/.bahsrc
 
 rosdep update
-
