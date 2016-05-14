@@ -1,2 +1,2 @@
-# sara_rosinstall
-Repository of rosinstall for easy installation
+# sara_install
+Repository of rosinstall and install script for easy installation
