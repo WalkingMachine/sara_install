@@ -5,18 +5,18 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 
 # To get the latest package lists
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
 # ROS installation
 sudo apt-get install -y ros-indigo-desktop-full -y
 
 # Install tools
-sudo apt-get install git pip python-wstool -y
+sudo apt-get install git python-pip python-wstool -y
 
 # Package installation
 sudo apt-get install ros-indigo-openni2-launch ros-indigo-urg-node ros-indigo-xsens-driver \
-ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketshinx ros-indigo-rosserial \
+ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-indigo-rosserial \
 ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-cob-perception-common ros-indigo-moveit-full ros-indigo-geographic-info \
