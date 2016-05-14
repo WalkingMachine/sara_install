@@ -44,3 +44,14 @@ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 source ~/.bahsrc
 
 rosdep update
+
+# catkin_make to build all the packages
+catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_msgs"
+
+catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_driver"
+
+catkin_make -DCATKIN_WHITELIST_PACKAGES=""
+
+catkin_make
+
+echo "Install Done"
