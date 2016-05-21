@@ -20,10 +20,13 @@ ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-in
 ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-cob-perception-common ros-indigo-moveit-full ros-indigo-geographic-info \
-ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall -y
+ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall espeak -y
 
 # Interface grafic couchapp
 pip install -U couchapp
+
+# pyttsx
+sudo pip install pyttsx
 
 # rosdep
 sudo rosdep init
