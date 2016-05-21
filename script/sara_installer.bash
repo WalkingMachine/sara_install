@@ -20,10 +20,16 @@ ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-in
 ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-cob-perception-common ros-indigo-moveit-full ros-indigo-geographic-info \
-ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall espeak -y
+ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev ros-indigo-object-recognition-core \
+ros-indigo-object-recognition-capture ros-indigo-object-recognition-reconstruction ros-indigo-object-recognition-linemod \
+ros-indigo-object-recognition-renderer ros-indigo-object-recognition-tabletop ros-indigo-object-recognition-tod \
+ros-indigo-object-recognition-transparent-objects ros-indigo-object-recognition-msgs \
+ros-indigo-object-recognition-ros ros-indigo-object-recognition-ros-visualization \
+ros-indigo-soem espeak -y
+
 
 # Interface grafic couchapp
-pip install -U couchapp
+sudo pip install -U couchapp
 
 # pyttsx
 sudo pip install pyttsx
@@ -43,3 +49,13 @@ source ~/.bahsrc
 
 rosdep update
 
+# catkin_make to build all the packages
+catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_msgs"
+
+catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_driver"
+
+catkin_make -DCATKIN_WHITELIST_PACKAGES=""
+
+catkin_make
+
+echo "Install Done"
