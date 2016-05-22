@@ -7,4 +7,30 @@
 
 - git: {local-name: cob_people_perception, uri: 'https://github.com/ipa320/cob_people_perception.git', version: indigo_dev}
 
+- git: {local-name: cob_perception_common, uri: 'https://github.com/ipa320/cob_perception_common.git', version: indigo_dev}
+
 - git: {local-name: kinova-ros, uri: 'https://github.com/Kinovarobotics/kinova-ros.git', version: master}
+
+- git: {local-name: wg-perception/object_recognition_core, uri: 'http://github.com/wg-perception/object_recognition_core.git', version: master}
+
+- git: {local-name: wg-perception/capture, uri: 'http://github.com/wg-perception/capture.git', version: master}
+
+- git: {local-name: wg-perception/reconstruction, uri: 'http://github.com/wg-perception/reconstruction.git', version: master}
+
+- git: {local-name: wg-perception/linemod, uri: 'http://github.com/wg-perception/linemod.git', version: master}
+
+- git: {local-name: wg-perception/ork_renderer, uri: 'http://github.com/wg-perception/ork_renderer.git', version: master}
+
+- git: {local-name: wg-perception/tabletop, uri: 'http://github.com/wg-perception/tabletop.git', version: master}
+
+- git: {local-name: wg-perception/tod, uri: 'http://github.com/wg-perception/tod.git', version: master}
+
+- git: {local-name: wg-perception/transparent_objects, uri: 'http://github.com/wg-perception/transparent_objects.git', version: master}
+
+- git: {local-name: wg-perception/object_recognition_msgs, uri: 'http://github.com/wg-perception/object_recognition_msgs.git', version: master}
+
+- git: {local-name: wg-perception/object_recognition_ros, uri: 'http://github.com/wg-perception/object_recognition_ros.git', version: master}
+
+- git: {local-name: wg-perception/object_recognition_ros_visualization, uri: 'http://github.com/wg-perception/object_recognition_ros_visualization.git', version: master}
+
+- git: {local-name: wg-perception/ork_tutorials, uri: 'http://github.com/wg-perception/ork_tutorials.git', version: master}

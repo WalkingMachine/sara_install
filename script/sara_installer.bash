@@ -19,12 +19,8 @@ sudo apt-get install ros-indigo-openni2-launch ros-indigo-urg-node ros-indigo-xs
 ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-indigo-rosserial \
 ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
-ros-indigo-cob-perception-common ros-indigo-moveit-full ros-indigo-geographic-info \
-ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev ros-indigo-object-recognition-core \
-ros-indigo-object-recognition-capture ros-indigo-object-recognition-reconstruction ros-indigo-object-recognition-linemod \
-ros-indigo-object-recognition-renderer ros-indigo-object-recognition-tabletop ros-indigo-object-recognition-tod \
-ros-indigo-object-recognition-transparent-objects ros-indigo-object-recognition-msgs \
-ros-indigo-object-recognition-ros ros-indigo-object-recognition-ros-visualization \
+ros-indigo-moveit-full ros-indigo-geographic-info \
+ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev \
 ros-indigo-soem espeak -y
 
 
@@ -33,10 +29,6 @@ sudo pip install -U couchapp
 
 # pyttsx
 sudo pip install pyttsx
-
-# rosdep
-sudo rosdep init
-rosdep update
 
 # workspace creation
 mkdir -p ~/sara_ws
@@ -47,7 +39,10 @@ wstool update -t src
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 source ~/.bahsrc
 
+# rosdep
+sudo rosdep init
 rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro indigo -y
 
 # catkin_make to build all the packages
 catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_msgs"
