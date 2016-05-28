@@ -17,7 +17,7 @@ sudo apt-get install git python-pip python-wstool -y
 # Package installation
 sudo apt-get install ros-indigo-openni2-launch ros-indigo-urg-node ros-indigo-xsens-driver \
 ros-indigo-joystick-drivers ros-indigo-navigation ros-indigo-pocketsphinx ros-indigo-rosserial \
-ros-indigo-roboteq-driver ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
+ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-moveit-full ros-indigo-geographic-info \
 ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev \
