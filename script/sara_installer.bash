@@ -37,7 +37,8 @@ wstool init src ~/sara_install/rosinstall/sara_full.rosinstall
 wstool update -t src
 
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
-source ~/.bahsrc
+echo "source ~/sara_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 # rosdep
 sudo rosdep init
@@ -53,4 +54,8 @@ catkin_make -DCATKIN_WHITELIST_PACKAGES=""
 
 catkin_make
 
+#enable database online viewer
+rosrun object_recognition_core push.sh
+
 echo "Install Done"
+
