@@ -9,3 +9,13 @@ Repository of rosinstall and install script for easy installation
 2. Run the install script ``` ./sara_install/script/sara_installer.bash```
 3. Take a coffee break or a tea break its going to take a while.
 4. Your are now ready to code.
+
+## Setup Remote
+
+Please check with the remote_setup.md
+
+## Troubleshooting
+
+1. catkin_make not found
+
+Close the terminal and reopen it.
