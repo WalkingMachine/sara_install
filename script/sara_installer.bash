@@ -21,8 +21,9 @@ ros-indigo-roboteq-diagnostics ros-indigo-roboteq-msgs ros-indigo-smach \
 ros-indigo-rtabmap-ros ros-indigo-gazebo-ros ros-indigo-slam-gmapping ros-indigo-map-laser \
 ros-indigo-moveit-full ros-indigo-geographic-info \
 ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev \
-ros-indigo-soem espeak -y
-
+ros-indigo-soem espeak ros-indigo- -y
+# Utility installation
+sudo apt install htop lm-sensors
 
 # Interface grafic couchapp
 sudo pip install -U couchapp
@@ -58,4 +59,3 @@ catkin_make
 rosrun object_recognition_core push.sh
 
 echo "Install Done"
-
