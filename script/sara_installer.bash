@@ -23,7 +23,7 @@ ros-indigo-moveit-full ros-indigo-geographic-info \
 ros-indigo-zbar-ros ros-indigo-dynamixel-motor couchdb python-rosinstall libyaml-dev \
 ros-indigo-soem espeak ros-indigo-object-recognition-core  ros-indigo-object-recognition-renderer -y
 # Utility installation
-sudo apt install htop lm-sensors
+sudo apt install htop lm-sensors tig
 
 # Interface grafic couchapp
 sudo pip install -U couchapp
