@@ -1,5 +1,9 @@
 # sara install
-Repository of rosinstall and install script for easy installation
+
+### Repository of rosinstall and install script for easy installation
+This install script will install all the necesary packages and script to run S.A.R.A.
+## Requirements
+1. ubuntu 14.04 LTS
 
 ## Dependency that need to be install before
 1.  ``` sudo apt-get install git ```
@@ -8,7 +12,8 @@ Repository of rosinstall and install script for easy installation
 1. Clone repo to your home ``` git clone https://github.com/WalkingMachine/sara_install.git ```
 2. Run the install script ``` ./sara_install/script/sara_installer.bash```
 3. Take a coffee break or a tea break its going to take a while.
-4. Your are now ready to code.
+4. See the remote_setup script.
+5. Your are now ready to code.
 
 ## Setup Remote
 
