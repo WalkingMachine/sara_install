@@ -2,6 +2,12 @@
 
 ### Repository of rosinstall and install script for easy installation
 This install script will install all the necesary packages and script to run S.A.R.A.
+
+## Recommended tools
+1. atom
+2. pycharm
+3. clion 
+
 ## Requirements
 1. ubuntu 14.04 LTS
 
