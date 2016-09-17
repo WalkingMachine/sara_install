@@ -30,3 +30,7 @@ Please check with the remote_setup.md
 1. catkin_make not found
 
 Close the terminal and reopen it.
+
+## waffle board
+
+https://waffle.io/WalkingMachine/sara_install
