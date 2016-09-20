@@ -78,8 +78,8 @@ source ~/.bashrc
 echo "ros dep"
 
 rosdep init
-rosdep update
-rosdep install --from-paths src --ignore-src --rosdistro indigo -y
+runuser -l $USER -c "rosdep update"
+runuser -l $USER -c "rosdep install --from-paths src --ignore-src --rosdistro indigo -y"
 if [ $? -ne 0 ]; then
         echo "ros dep failed."
         exit
