@@ -77,7 +77,7 @@ source ~/.bashrc
 # rosdep
 echo "ros dep"
 
-runuser -l $USER -c "rosdep init"
+rosdep init
 runuser -l $USER -c "rosdep update"
 runuser -l $USER -c "rosdep install --from-paths src --ignore-src --rosdistro indigo -y"
 if [ $? -ne 0 ]; then
