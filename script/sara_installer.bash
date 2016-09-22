@@ -38,7 +38,7 @@ ros-indigo-soem espeak ros-indigo-object-recognition-core  ros-indigo-object-rec
 # Utility installation
 echo "Installing Utility"
 
-sudo apt install htop lm-sensors tig
+sudo apt install htop lm-sensors tig -y
 
 # Interface graphic couchapp
 echo "Installing graphic for couchapp"
