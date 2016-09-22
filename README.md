@@ -35,6 +35,9 @@ Please check with the [remote_setup.md](https://github.com/WalkingMachine/sara_i
 
 ## Troubleshooting
 
-1. catkin_make not found
-
-Close the terminal and reopen it.
+* catkin_make not found
+  1. Close the terminal and reopen it.
+* Build error, finished before reaching [100%]
+  1. cd ~/sara_ws
+  2. catkin_make -DCATKIN_WHITELIST_PACKAGES="wm_arm_msgs"
+  3. catkin_make -DCATKIN_WHITELIST_PACKAGES=""
