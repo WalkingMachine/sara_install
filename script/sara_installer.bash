@@ -59,7 +59,6 @@ wstool init src ~/sara_install/rosinstall/sara_full.rosinstall
 wstool update -t src
 
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
-echo "source ~/sara_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # rosdep
@@ -82,6 +81,8 @@ catkin_make
 
 #enable database online viewer
 rosrun object_recognition_core push.sh
+
+echo "source ~/sara_ws/devel/setup.bash" >> ~/.bashrc
 
 echo "Continue with remote_setup.md"
 echo "Installation done go get a beer and code"
