@@ -1,4 +1,4 @@
-- git: {local-name: sara_simultaion, uri: 'https://github.com/WalkingMachine/sara_simulation.git', feature_multiRepo}
+- git: {local-name: sara_simultaion, uri: 'https://github.com/WalkingMachine/sara_simulation.git', master}
 - git: {local-name: sara_commun, uri: 'https://github.com/WalkingMachine/sara_commun.git', version: feature_multiRepo}
 - git: {local-name: sara_desktop, uri: 'https://github.com/WalkingMachine/sara_desktop.git', version: feature_multiRepo}
 
