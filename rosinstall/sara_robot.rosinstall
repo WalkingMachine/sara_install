@@ -1,5 +1,5 @@
-- git: {local-name: sara_commun, uri: 'https://github.com/WalkingMachine/sara_commun.git', version: master}
-- git: {local-name: sara_robot, uri: 'https://github.com/WalkingMachine/sara_robot.git', version: master}
+- git: {local-name: sara_commun, uri: 'https://github.com/WalkingMachine/sara_commun.git', version: feature_multipleRepo}
+- git: {local-name: sara_robot, uri: 'https://github.com/WalkingMachine/sara_robot.git', version: feature_multipleRepo}
 
 - git: {local-name: robotiq, uri: 'https://github.com/ros-industrial/robotiq.git', version: indigo-devel}
 
