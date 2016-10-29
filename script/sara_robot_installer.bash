@@ -84,5 +84,11 @@ rosrun object_recognition_core push.sh
 
 echo "source ~/sara_ws/devel/setup.bash" >> ~/.bashrc
 
+echo "Installing cuda"
+./cuda.bash
+
+echo "Installing opencv"
+./opencv.bash
+
 echo "Continue with remote_setup.md"
 echo "Installation done go get a beer and code"
