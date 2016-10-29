@@ -55,7 +55,7 @@ echo "Creating Workspace"
 
 mkdir -p ~/sara_ws
 cd ~/sara_ws
-wstool init src ~/sara_install/rosinstall/sara_full.rosinstall
+wstool init src ~/sara_install/rosinstall/sara_robot.rosinstall
 wstool update -t src
 
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
