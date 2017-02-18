@@ -30,5 +30,5 @@ rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
 # Invoke catkin_make_isolated
 ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
 
-# Source the new workspace
-source ~/ros_catkin_ws/install_isolated/setup.bash
+echo "Done"
+echo "Please source the bash at source ~/ros_catkin_ws/install_isolated/setup.bash"
