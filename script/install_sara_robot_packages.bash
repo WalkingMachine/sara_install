@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#create sara workspace and enter in
-mkdir -p  ~/sara_ws/src
+#create sara workspace and enter
+mkdir -p ~/sara_ws/src
 cd ~/sara_ws
 
-# download the rosinstall file
-wget https://raw.githubusercontent.com/WalkingMachine/ros_install/master/desktop.rosinstall
+# download the rosinstall file 
+wget https://raw.githubusercontent.com/WalkingMachine/ros_install/master/sara.rosinstall
 
 # init the workspace
 wstool init -j8 src sara.rosinstall
