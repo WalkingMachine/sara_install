@@ -1,0 +1,108 @@
+- git:
+    local-name: sara_follow_me
+    uri: https://github.com/walkingmachine/sara_follow_me.git
+    version: develop
+
+- git:
+    local-name: sara_robot
+    uri: https://github.com/walkingmachine/sara_robot.git
+    version: develop
+
+- git:
+    local-name: sara_arm_driver
+    uri: https://github.com/walkingmachine/sara_arm_driver.git
+    version: develop
+
+- git:
+    local-name: sara_description
+    uri: https://github.com/walkingmachine/sara_description.git
+    version: develop
+
+- git:
+    local-name: zbar_ros
+    uri: https://github.com/walkingmachine/zbar_ros.git
+    version: develop
+
+- git:
+    local-name: wm_tts
+    uri: https://github.com/walkingmachine/wm_tts.git
+    version: develop
+
+- git:
+    local-name: wm_supreme_planner
+    uri: https://github.com/walkingmachine/wm_supreme_planner.git
+    version: develop
+
+- git:
+    local-name: wm_interpreter
+    uri: https://github.com/walkingmachine/wm_interpreter.git
+    version: develop
+
+- git:
+    local-name: sara_arm_msgs
+    uri: https://github.com/walkingmachine/sara_arm_msgs.git
+    version: develop
+
+- git:
+    local-name: sara_moveit
+    uri: https://github.com/walkingmachine/sara_moveit.git
+    version: develop
+
+- git:
+    local-name: sara_launch
+    uri: https://github.com/walkingmachine/sara_launch.git
+    version: develop
+
+- git:
+   local-name: sara_image_detection
+   uri: https://github.com/walkingmachine/sara_image_detection.git
+   version: develop
+
+- git:
+    local-name: sara_grasping
+    uri: https://github.com/walkingmachine/sara_grasping.git
+    version: develop
+
+- git:
+    local-name: sara_navigation
+    uri: https://github.com/walkingmachine/sara_navigation.git
+    version: develop
+
+- git:
+    local-name: iai_kinect2
+    uri: https://github.com/walkingmachine/iai_kinect2.git
+    version: develop
+
+- git:
+    local-name: wm_robocup2016
+    uri: https://github.com/walkingmachine/wm_robocup2016.git
+    version: develop
+
+- git:
+    local-name: wm_supervisor
+    uri: https://github.com/walkingmachine/wm_supervisor.git
+    version: develop
+
+- git:
+    local-name: wm_dynamixel
+    uri: https://github.com/walkingmachine/wm_dynamixel_controller.git
+    version: develop
+
+- git:
+    local-name: wm_odometry_feedback
+    uri: https://github.com/walkingmachine/wm_odometry_feedback.git
+    version: develop
+- git:
+    local-name: wm_ork
+    uri: https://github.com/walkingmachine/wm_ork.git
+    version: develop
+
+- git:
+    local-name: sara_inverse_kinematics
+    uri: https://github.com/walkingmachine/sara_inverse_kinematics
+    version: develop
+
+- git:
+    local-name: sara_vocab
+    uri: https://github.com/walkingmachine/sara_vocab.git
+    version: develop
