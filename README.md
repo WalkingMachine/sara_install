@@ -22,12 +22,19 @@ This install script will install all the necesary packages and script to run S.A
 ## Dependency that need to be install before
 1.  ``` sudo apt-get install git ```
 
-## Step to install
-1. Clone repo to your home ``` git clone https://github.com/WalkingMachine/sara_install.git ```
-2. Run the install script ``` ./sara_install/script/sara_installer.bash```
-3. Take a coffee break or a tea break its going to take a while.
-4. See the remote_setup script.
-5. Your are now ready to code.
+## Step to install (ROBOT)
+1. Clone this repo to the root of the user ```git clone https://github.com/WalkingMachine/sara_install.git```
+2. Run the script to install the ros packages ```./script/install_ros_packages.bash```
+3. Add ``` source /opt/ros/kinetic/setup.bash``` to the bashrc
+4. Run the script to install the robot packages ```./script/install_sara_robot_packages.bash```
+5. Add ``` source ~/sara_ws/devel/setup.bash```
+
+## Step to install (DESKTOP)
+1. Clone this repo to the root of the user ```git clone https://github.com/WalkingMachine/sara_install.git```
+2. Run the script to install the ros packages ```./script/install_ros_packages.bash```
+3. Add ``` source /opt/ros/kinetic/setup.bash``` to the bashrc
+4. Run the script to install the desktop packages ```./script/install_sara_packages.bash```\
+5. Add ``` source ~/sara_ws/devel/setup/bash```
 
 ## Setup Remote
 
