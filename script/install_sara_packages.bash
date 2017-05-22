@@ -22,7 +22,7 @@ echo "source ~/sara_ws/devel/setup.bash" >> ~/.bashrc
 
 # Add ROS ip adress for communication with non local nodes
 # Need to update IP adress in function of the network configuration
-echo "export ROS_IP=192.168.0.118" >> ~/.bashrc
+echo "#export ROS_IP=192.168.0.118" >> ~/.bashrc
 
 
 echo "Please source the .bashrc file"
