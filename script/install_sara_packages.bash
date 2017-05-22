@@ -5,7 +5,7 @@ mkdir -p  ~/sara_ws/src
 cd ~/sara_ws
 
 # download the rosinstall file
-wget https://raw.githubusercontent.com/WalkingMachine/ros_install/master/sara.rosinstall
+wget https://raw.githubusercontent.com/WalkingMachine/ros_install/master/desktop.rosinstall
 
 # init the workspace
 wstool init -j8 src sara.rosinstall
