@@ -1,0 +1,4 @@
+- git:
+    local-name: sara_msgs
+    uri: https://github.com/walkingmachine/sara_launch.git
+    version: master
