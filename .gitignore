@@ -1,6 +1,6 @@
 build
 devel
 src/*
-!src/sara.rosinstall
+!src/.rosinstall
 .catkin_workspace
 .idea
