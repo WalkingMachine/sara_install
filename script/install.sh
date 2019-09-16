@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export ROS_DISTRO=""
+WSDIR=""
 
 ######################################
 ## Preparation
@@ -12,20 +14,20 @@ UBUNTUDISTRO=$(lsb_release -cs)
 echo "The Ubuntu distro is: $UBUNTUDISTRO"
 case "$UBUNTUDISTRO" in
         xenial)
-            ROSDISTRO=kinetic
+            ROS_DISTRO=kinetic
             ;;
 
         bionic)
-            ROSDISTRO=melodic
+            ROS_DISTRO=melodic
             ;;
         *)
             echo "$UBUNTUDISTRO is not supported, check the install scipt for info."
             exit 1
 esac
-echo "Your ROS distro is $ROSDISTRO"
+echo "Your ROS distro is $ROS_DISTRO"
 
 # Source ros
-source "/opt/ros/$ROSDISTRO/setup.bash"
+source "/opt/ros/$ROS_DISTRO/setup.bash"
 
 
 ######################################
@@ -34,14 +36,15 @@ source "/opt/ros/$ROSDISTRO/setup.bash"
 # Move to the workspace
 cd "$WSDIR"
 
+sudo rosdep init
+
+# wstool init src
+wstool update -t src
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+
+# Make the workspace
 catkin_make
-source devel/setup.bash
-
-
-wstool init src
-wstool -t src
-
-
 
 
 
@@ -50,5 +53,8 @@ wstool -t src
 ######################################
 ## End
 
+source devel/setup.bash
 # Move back to the original position
 cd - > /dev/null
+
+
