@@ -1,16 +1,31 @@
 - git:
     local-name: sara_launch
-    uri: https://github.com/walkingmachine/sara_launch.git
+    uri: git@github.com:walkingmachine/sara_launch.git
     version: master
 
 - git:
-    local-name: sara_description
-    uri: https://github.com/walkingmachine/sara_description.git
-    version: feature/total_revision
+    local-name: sara_msgs
+    uri: git@github.com:walkingmachine/sara_msgs.git
+    version: master
 
 - git:
-    local-name: sara_msgs
-    uri: https://github.com/walkingmachine/sara_msgs.git
+    local-name: turtlebot3
+    uri: git@github.com:ROBOTIS-GIT/turtlebot3.git
+    version: master
+
+- git:
+    local-name: turtlebot3_gazebo_plugin
+    uri: git@github.com:ROBOTIS-GIT/turtlebot3_gazebo_plugin.git
+    version: master
+
+- git:
+    local-name: turtlebot3_msgs
+    uri: git@github.com:ROBOTIS-GIT/turtlebot3_msgs.git
+    version: master
+
+- git:
+    local-name: turtlebot3_simulations
+    uri: git@github.com:ROBOTIS-GIT/turtlebot3_simulations.git
     version: master
 
 - git:
