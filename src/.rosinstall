@@ -9,6 +9,16 @@
     version: feature/total_revision
 
 - git:
+    local-name: sara_description
+    uri: git@github.com:walkingmachine/sara_description.git
+    version: master
+
+- git:
+    local-name: robotiq
+    uri: https://github.com/ros-industrial/robotiq.git
+    version: master
+
+- git:
     local-name: sara_msgs
     uri: https://github.com/walkingmachine/sara_msgs.git
     version: master
