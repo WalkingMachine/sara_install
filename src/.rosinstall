@@ -15,8 +15,13 @@
 
 - git:
     local-name: robotiq
-    uri: https://github.com/ros-industrial/robotiq.git
+    uri: https://github.com/utecrobotics/robotiq.git
     version: master
+
+- git:
+    local-name: ridgeback_simulator
+    uri: https://github.com/ridgeback/ridgeback_simulator.git
+    version: kinetic-devel
 
 - git:
     local-name: sara_msgs
