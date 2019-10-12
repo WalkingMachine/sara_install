@@ -6,39 +6,9 @@
 - git:
     local-name: sara_description
     uri: git@github.com:walkingmachine/sara_description.git
-    version: master
-
-- git:
-    local-name: robotiq
-    uri: https://github.com/utecrobotics/robotiq.git
-    version: master
-
-- git:
-    local-name: ridgeback_simulator
-    uri: https://github.com/ridgeback/ridgeback_simulator.git
-    version: kinetic-devel
+    version: feature/total_revision
 
 - git:
     local-name: sara_msgs
     uri: git@github.com:walkingmachine/sara_msgs.git
-    version: master
-
-- git:
-    local-name: turtlebot3
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3.git
-    version: master
-
-- git:
-    local-name: turtlebot3_gazebo_plugin
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_gazebo_plugin.git
-    version: master
-
-- git:
-    local-name: turtlebot3_msgs
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_msgs.git
-    version: master
-
-- git:
-    local-name: turtlebot3_simulations
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_simulations.git
     version: master
