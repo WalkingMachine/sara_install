@@ -1,16 +1,11 @@
 - git:
     local-name: sara_launch
     uri: https://github.com/walkingmachine/sara_launch.git
-    version: total_revision
+    version: master
 
 - git:
     local-name: sara_description
     uri: https://github.com/walkingmachine/sara_description.git
-    version: feature/total_revision
-
-- git:
-    local-name: sara_description
-    uri: git@github.com:walkingmachine/sara_description.git
     version: feature/total_revision
 
 - git:
