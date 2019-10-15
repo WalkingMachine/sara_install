@@ -27,3 +27,13 @@
     local-name: sara_behaviors
     uri: https://github.com/walkingmachine/sara_behaviors.git
     version: master
+
+- git:
+    local-name: flexbe_app
+    uri: https://github.com/FlexBE/flexbe_app.git
+    version: master
+
+- git:
+    local-name: wm_tts
+    uri: https://github.com/WalkingMachine/wm_tts.git
+    version: master

@@ -1,4 +1,6 @@
 #!/bin/bash
+######################################
+## Validation
 
 
 ######################################
@@ -28,6 +30,9 @@ echo -e "\n\n"
 
 ######################################
 ## Preparation
+
+export ROS_DISTRO=""
+WSDIR=""
 
 # Get the workspace path
 WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
