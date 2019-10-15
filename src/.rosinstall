@@ -29,41 +29,6 @@
     version: master
 
 - git:
-    local-name: turtlebot3
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3.git
-    version: master
-
-- git:
-    local-name: turtlebot3_gazebo_plugin
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_gazebo_plugin.git
-    version: master
-
-- git:
-    local-name: turtlebot3_msgs
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_msgs.git
-    version: master
-
-- git:
-    local-name: turtlebot3_simulations
-    uri: git@github.com:ROBOTIS-GIT/turtlebot3_simulations.git
-    version: master
-
-- git:
-    local-name: sara_navigation
-    uri: https://github.com/walkingmachine/sara_navigation.git
-    version: feature/new_navigation
-
-- git:
-    local-name: sara_behaviors
-    uri: https://github.com/walkingmachine/sara_behaviors.git
-    version: fix/flexbe_new_format
-
-- git:
-    local-name: wm_tts
-    uri: https://github.com/walkingmachine/wm_tts.git
-    version: master
-
-- git:
     local-name: flexbe_app
     uri: https://github.com/FlexBE/flexbe_app.git
     version: master
