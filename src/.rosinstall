@@ -16,13 +16,8 @@
 - git:
     local-name: sara_navigation
     uri: https://github.com/walkingmachine/sara_navigation.git
-    version: master
-
-- git:
-    local-name: ridgeback
-    uri: https://github.com/ridgeback/ridgeback.git
-    version: kinetic-devel
-
+    version: feature/new_navigation
+    
 - git:
     local-name: sara_behaviors
     uri: https://github.com/walkingmachine/sara_behaviors.git
@@ -37,3 +32,8 @@
     local-name: wm_tts
     uri: https://github.com/WalkingMachine/wm_tts.git
     version: master
+
+- git:
+    local-name: sara_moveit
+    uri: https://github.com/WalkingMachine/sara_moveit.git
+    version: feature/simulation_safe
