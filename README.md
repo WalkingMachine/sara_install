@@ -29,7 +29,11 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](#src/.rosinstall) wich define the list of packages required to install your configuration. Depending on our needs, you can edit this file to change your configuration.
 
 ## src
+<<<<<<< 7a8550c08da4b8d5a4fc95b0ff0547e6f7282934
 The src directory is the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
+=======
+The src directory is usually the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src are
+>>>>>>> update le readme
 
 ## Workspace versioning layout
 This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
