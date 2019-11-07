@@ -1,18 +1,26 @@
 #!/bin/bash
-
-
 ######################################
 ## Validation
 
-export ROS_DISTRO=""
-WSDIR=""
+if [[ $_ == $0 ]]
+then
+	>&2 echo "Ce script doit être sourcé. Utilisez plutot la commande suivante:"
+	>&2 echo "	source $0"
+	exit 0
+fi
 
 
 ######################################
 ## Preparation
 
+export ROS_DISTRO=""
+WSDIR=""
+
 # Get the workspace path
 WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+
+# Install wstool
+sudo apt install python-wstool
 
 
 # Getting the distros
