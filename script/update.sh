@@ -27,13 +27,7 @@ cd "$WSDIR"
 
 
 ######################################
-## Installation
-
-# Install wstool
-sudo apt install python-wstool
-
-# Initialise rosdep database
-sudo rosdep init
+## Update all packages
 
 # wstool init src
 wstool update -t src
@@ -47,15 +41,9 @@ catkin_make
 ######################################
 ## End
 
-# Get the right setup for the shell
-source $WSDIR/devel/setup.$SHELL_EXTENTION
-
+source devel/setup.bash
 # Move back to the original position
 cd - > /dev/null
-
-
-echo "To automatically source this workspace, please add the following line to your ~/.$SHELL_EXTENTION""rc"
-echo "    source $WSDIR/script/setup.sh"
 
 
 set +v
