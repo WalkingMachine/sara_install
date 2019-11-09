@@ -29,8 +29,9 @@ cd "$WSDIR"
 ######################################
 ## Installation
 
-# Install wstool
-sudo apt install python-wstool
+# Install boostrap dependencies
+sudo apt-get update
+sudo apt-get install -y python-rosdep python-wstool
 
 # Initialise rosdep database
 sudo rosdep init
