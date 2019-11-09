@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -v
 
 ######################################
 ## Validation
@@ -12,6 +11,22 @@ then
 	exit 0
 fi
 
+
+echo "\n\n"
+echo "********************************************************"
+echo "*                 STARTING INSTALLATION"
+echo "********************************************************"
+echo "*"
+echo "*       This may take a while."
+echo "*       Please stay close in case of error"
+echo "*"
+echo "*                     - Installation script"
+echo "*                       $(date +"%Y")"
+echo "*"
+echo "********************************************************"
+echo "\n\n"
+
+set -v
 
 ######################################
 ## Preparation
@@ -54,9 +69,16 @@ source $WSDIR/devel/setup.$SHELL_EXTENTION
 # Move back to the original position
 cd - > /dev/null
 
-
-echo "To automatically source this workspace, please add the following line to your ~/.$SHELL_EXTENTION""rc"
-echo "    source $WSDIR/script/setup.sh"
-
-
 set +v
+
+echo "\n\n"
+echo "********************************************************"
+echo "*                 INSTALLATION COMPLETED"
+echo "********************************************************"
+echo "*"
+echo "*  To automatically source this workspace, please add"
+echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
+echo "*    source $WSDIR/script/setup.sh"
+echo "*"
+echo "********************************************************"
+echo "\n\n"

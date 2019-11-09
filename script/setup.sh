@@ -39,6 +39,8 @@ case "$UBUNTUDISTRO" in
             exit 1
 esac
 
+set -v
+
 ######################################
 ## Alias preparation
 

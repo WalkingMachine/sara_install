@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -v
-
 ######################################
 ## Validation
 
@@ -39,6 +37,3 @@ wstool status -t src
 
 # Move back to the original position
 cd - > /dev/null
-
-
-set +v
