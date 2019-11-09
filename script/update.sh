@@ -23,7 +23,7 @@ WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 source "$WSDIR/script/setup.sh"
 
 # Move to the workspace
-cd "$WSDIR"
+cd "$WSDIR"--install -DCMAKE_BUILD_TYPE=Release
 
 
 ######################################
@@ -35,7 +35,7 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
 # Make the workspace
-catkin_make
+catkin_make -DCMAKE_BUILD_TYPE=Release
 
 
 ######################################

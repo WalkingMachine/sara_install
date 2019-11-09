@@ -41,7 +41,7 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
 # Make the workspace
-catkin_make
+catkin_make -DCMAKE_BUILD_TYPE=Release
 
 
 ######################################
