@@ -26,7 +26,6 @@ echo "*"
 echo "********************************************************"
 echo "\n\n"
 
-set -v
 
 ######################################
 ## Preparation
@@ -44,6 +43,7 @@ cd "$WSDIR"
 ######################################
 ## Installation
 
+set -v
 # Install boostrap dependencies
 sudo apt-get update
 sudo apt-get install -y python-rosdep python-wstool
@@ -59,6 +59,7 @@ rosdep install --from-paths src --ignore-src -r -y
 # Make the workspace
 catkin_make -DCMAKE_BUILD_TYPE=Release
 
+set +v
 
 ######################################
 ## End
@@ -69,7 +70,6 @@ source $WSDIR/devel/setup.$SHELL_EXTENTION
 # Move back to the original position
 cd - > /dev/null
 
-set +v
 
 echo "\n\n"
 echo "********************************************************"

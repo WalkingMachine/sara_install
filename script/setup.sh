@@ -26,7 +26,6 @@ WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 # Getting the distros
 export ROS_DISTRO=""
 UBUNTUDISTRO=$(lsb_release -cs)
-echo "The Ubuntu distro is: $UBUNTUDISTRO"
 case "$UBUNTUDISTRO" in
         xenial)
             ROS_DISTRO=kinetic
@@ -39,7 +38,6 @@ case "$UBUNTUDISTRO" in
             exit 1
 esac
 
-set -v
 
 ######################################
 ## Alias preparation
@@ -48,8 +46,6 @@ alias INSTALL_SARA="source $WSDIR/script/install.sh"
 alias UPDATE_SARA="source $WSDIR/script/update.sh"
 alias STATUS_SARA="source $WSDIR/script/status.sh"
 
-
-set +v
 
 ######################################
 ## Source

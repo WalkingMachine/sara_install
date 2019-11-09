@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -v
 
 ######################################
 ## Validation
@@ -29,6 +28,7 @@ cd "$WSDIR"--install -DCMAKE_BUILD_TYPE=Release
 ######################################
 ## Update all packages
 
+set -v
 # wstool init src
 wstool update -t src
 rosdep update
@@ -36,7 +36,7 @@ rosdep install --from-paths src --ignore-src -r -y
 
 # Make the workspace
 catkin_make -DCMAKE_BUILD_TYPE=Release
-
+set +v
 
 ######################################
 ## End
@@ -44,6 +44,3 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 source devel/setup.bash
 # Move back to the original position
 cd - > /dev/null
-
-
-set +v
