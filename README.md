@@ -47,19 +47,21 @@ If you want to work on a specific new feature which require a specific set of pa
 1. Create your development branch.``` git checkout -b config/my_awesome_feature_config ```
 1. Modify the [.rosinstall file](#src/.rosinstall) to set the packages you need.
 1. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
+
+### Make modifications
 1. Edit code within the desired packages, create feature branches, commit your changes, push them.
    ``` cd src/my_package ```
    ``` editing ```
    ``` git commit edited_file ```
    ``` git push origin feature/my_awesome_feature ```
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
-
+1. Use the status.sh script to see all modified packages.
 
 ### Update all packages
-If you need to work with all the latest packages use the update script.
+If you need to work with all the latest packages use the update.sh script.
    ``` source script/update.sh ```
    
-   ## Troubleshooting
+## Troubleshooting
 
 * catkin_make not found
   1. Close the terminal and reopen it.
