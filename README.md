@@ -3,16 +3,17 @@
 ### Repository of rosinstall and install script for easy installation
 This repo is an enveloppe containing a catkin workspace containing most tools needed to work with Sara.
 Going from installation to environment configuration and code version control.
-Note that this is a repo containing a workspace containing repos. This will affect tthe way you work with your repos.
+Note that this is a repo containing a workspace containing repos. This will affect the way you work with your repos.
 
 ## Table of content
 1. [Recommended tools](#recommended-tools)
-2. [Requirements](#requirements)
-3. [Dedendency](#dependency-that-need-to-be-install-before)
-4. [Install procedure](#step-to-install)
-5. [Main workflow](#Main-workflow)
-6. [Setup remote](#setup-remote)
-7. [Troubleshooting](#troubleshooting)
+1. [Requirements](#requirements)
+1. [.rosinstal](#rosinstall)
+1. [Workspace versioning layout](#workspace-versioning-layout)
+1. [src](#src)
+1. [Main workflow](#main-workflow)
+1. [Setup remote](#setup-remote)
+1. [Troubleshooting](#troubleshooting)
 
 ## Recommended tools
 These tool are recommended by Walking Machine to work on Sara. Those are only mere recomendation. You are invited to use your prefered IDE (except visual studio. Yerk!).
@@ -25,13 +26,26 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 2. Install [ROS Kinetic for Ubuntu](https://wiki.ros.org/kinetic/Installation/Ubuntu) by following all steps up to 1.7. The tutorials are good for learners but not needed for Sara.
 3.  Install our version control system, git. ``` sudo apt-get install git ```
 
-## Step to install
+## .rosinstal
+Sara_install make use of a tool called [wstool](https://wiki.ros.org/wstool). This piece of software use a configuration file named [.rosinstall](#src/.rosinstall) within wich we can define the list of packages we need to install. Depending on our needs, we can edit this file to change our configuration.
+
+## Workspace versioning layout
+This workspace is special since it is encapsuled within the sara_install git repo. This mean that it's configuration is versionnised and you can switch branches to change configuration. Thouhg, you need to keep in mind that some directories are purposely ignored [see .gitignore](#.gitignore). The [src directory](#src) is one of them.
+
+
+## Main workflow
+### First complete installation
+If you want to install every packages with their main branches.
 1. Clone this repo anywhere ``` git clone https://github.com/WalkingMachine/sara_install.git ```
 2. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
 5. Your are now ready to code.
 
+### Installation for specific development
+If you want to work on a specific part of the stack.
+1. Clone this repo anywhere ``` git clone https://github.com/WalkingMachine/sara_install.git ```
+2. Checkout the
 
-## Main workflow
+2. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
 
 3. Edit code, commit, push
 4.
