@@ -1,3 +1,104 @@
+
+- git:
+    local-name: LED-Visage-Arduino
+    uri: https://github.com/WalkingMachine/LED-Visage-Arduino.git
+    version: nouvelle_emotion
+- git:
+    local-name: darknet_ros
+    uri: https://github.com/WalkingMachine/darknet_ros.git
+    version: feature/compression
+- git:
+    local-name: dynamixel_control_hw
+    uri: https://github.com/WalkingMachine/dynamixel_control_hw.git
+    version: feature/histeresis
+- git:
+    local-name: flexbe_app
+    uri: https://github.com/ffriese/flexbe_app.git
+    version: master
+- git:
+    local-name: gender-age-classification
+    uri: https://github.com/WalkingMachine/gender-age-classification.git
+    version: master
+- git:
+    local-name: generic_flexbe_states
+    uri: https://github.com/FlexBE/generic_flexbe_states.git
+    version: master
+- git:
+    local-name: gpd
+    uri: https://github.com/atenpas/gpd.git
+    version: forward
+- git:
+    local-name: gpg
+    uri: https://github.com/atenpas/gpg.git
+    version: master
+- git:
+    local-name: lab_ros_speech_to_text
+    uri: https://github.com/WalkingMachine/lab_ros_speech_to_text.git
+    version: master
+- git:
+    local-name: libdynamixel
+    uri: https://github.com/resibots/libdynamixel.git
+    version: x-series
+- git:
+    local-name: marytts
+    uri: https://github.com/marytts/marytts
+    version: master
+- git:
+    local-name: object_recognition_msgs
+    uri: https://github.com/wg-perception/object_recognition_msgs.git
+    version: master
+- git:
+    local-name: odas_ros
+    uri: https://github.com/introlab/odas_ros.git
+    version: dev
+- git:
+    local-name: people
+    uri: https://github.com/kdhansen/people.git
+    version: kinetic
+- git:
+    local-name: robot_pose_publisher
+    uri: https://github.com/GT-RAIL/robot_pose_publisher.git
+    version: master
+- git:
+    local-name: roboteq
+    uri: https://github.com/WalkingMachine/roboteq.git
+    version: master
+- git:
+    local-name: robotiq_140_description
+    uri: https://github.com/WalkingMachine/robotiq_140_description.git
+    version: master
+- git:
+    local-name: robotiq_140_gripper
+    uri: https://github.com/WalkingMachine/robotiq_140_gripper.git
+    version: master
+- git:
+    local-name: ros-face-recognition
+    uri: https://github.com/WalkingMachine/ros-face-recognition.git
+    version: feature/remove_age
+- git:
+    local-name: rviz_tools_py
+    uri: https://github.com/DavidB-CMU/rviz_tools_py.git
+    version: master
+- git:
+    local-name: sara_behaviors
+    uri: https://github.com/WalkingMachine/sara_behaviors.git
+    version: merge_master
+- git:
+    local-name: sara_control
+    uri: https://github.com/WalkingMachine/sara_control.git
+    version: ajustements
+- git:
+    local-name: sara_description
+    uri: https://github.com/WalkingMachine/sara_description.git
+    version: lowPolyURDF
+- git:
+    local-name: sara_launch
+    uri: https://github.com/WalkingMachine/sara_launch.git
+    version: master
+- git:
+    local-name: sara_moveit
+    uri: https://github.com/WalkingMachine/sara_moveit.git
+    version: feature/simulation_safe
 - git:
  local-name: sara_msgs
  uri: https://github.com/walkingmachine/sara_msgs.git
