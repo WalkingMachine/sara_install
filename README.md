@@ -51,9 +51,13 @@ If you want to work on a specific new feature which require a specific set of pa
 ### Make modifications
 1. Edit code within the desired packages, create feature branches, commit your changes, push them.
    ``` cd src/my_package ```
+   
    ``` editing ```
+   
    ``` git commit edited_file ```
+   
    ``` git push origin feature/my_awesome_feature ```
+   
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages.
 
