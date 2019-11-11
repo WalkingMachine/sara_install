@@ -1,7 +1,7 @@
 - git:
     local-name: sara_launch
     uri: https://github.com/walkingmachine/sara_launch.git
-    version: master
+    version: total_revision
 
 - git:
     local-name: sara_description
@@ -31,11 +31,6 @@
 - git:
     local-name: flexbe_app
     uri: https://github.com/FlexBE/flexbe_app.git
-    version: master
-
-- git:
-    local-name: wm_tts
-    uri: https://github.com/WalkingMachine/wm_tts.git
     version: master
 
 - git:
