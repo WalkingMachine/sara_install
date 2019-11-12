@@ -29,10 +29,10 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 Sara_install make use of a tool called [wstool](https://wiki.ros.org/wstool). This piece of software use a configuration file named [.rosinstall](#src/.rosinstall) within wich we can define the list of packages we need to install. Depending on our needs, we can edit this file to change our configuration.
 
 ## src
-The src directory is usually the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src are 
+The src directory is usually the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
 
 ## Workspace versioning layout
-This workspace is special since it is encapsuled within the sara_install git repo. This mean that it's configuration is versionnised and you can switch branches to change configuration. Thouhg, you need to keep in mind that the [src directory](#src) directory is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to les wstool be the main package manager and also maintain a retrocompatibility whith the old manual workflow. Each packages within src will not be touched by sara_install and remain their own individual git repositories.
+This workspace is special since it is encapsuled within the sara_install git repo. This mean that it's configuration is versionnised and you can switch branches to change configuration. Thouhg, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to les wstool be the main package manager and also maintain a retrocompatibility whith the old manual workflow. Each packages within src will not be touched by sara_install and remain their own individual git repositories.
 ![Versionning layout](https://raw.githubusercontent.com/WalkingMachine/sara_install/complete_rework/WorkspaceLayout.jpg "Versionning layout")
 
 
@@ -58,7 +58,7 @@ If you want to work on a specific new feature which require a specific set of pa
    
    ``` git commit edited_file ```
    
-   ``` git push origin feature/my_awesome_feature ```
+   ``` git push -u origin feature/my_awesome_feature ```
    
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages.
