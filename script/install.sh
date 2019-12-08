@@ -12,19 +12,19 @@ then
 fi
 
 
-echo "\n\n"
+echo -e "\n\n"
 echo "********************************************************"
 echo "*                 STARTING INSTALLATION"
 echo "********************************************************"
 echo "*"
 echo "*       This may take a while."
-echo "*       Please stay close in case of error"
+echo "*       Please stay close in case of error(s)."
 echo "*"
 echo "*                     - Installation script"
 echo "*                       $(date +"%Y")"
 echo "*"
 echo "********************************************************"
-echo "\n\n"
+echo -e "\n\n"
 
 
 ######################################
@@ -71,7 +71,7 @@ source $WSDIR/devel/setup.$SHELL_EXTENTION
 cd - > /dev/null
 
 
-echo "\n\n"
+echo -e "\n\n"
 echo "********************************************************"
 echo "*                 INSTALLATION COMPLETED"
 echo "********************************************************"
@@ -81,4 +81,4 @@ echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
 echo "*    source $WSDIR/script/setup.sh"
 echo "*"
 echo "********************************************************"
-echo "\n\n"
+echo -e "\n\n"
