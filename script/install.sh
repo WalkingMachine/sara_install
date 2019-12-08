@@ -11,7 +11,6 @@ then
 	exit 0
 fi
 
-
 echo -e "\n\n"
 echo "********************************************************"
 echo "*                 STARTING INSTALLATION"
@@ -21,7 +20,7 @@ echo "*       This may take a while."
 echo "*       Please stay close in case of error(s)."
 echo "*"
 echo "*                     - Installation script"
-echo "*                       $(date +"%Y")"
+echo "*                       $(date +(%B %Y))"
 echo "*"
 echo "********************************************************"
 echo -e "\n\n"
@@ -58,7 +57,6 @@ rosdep install --from-paths src --ignore-src -r -y
 
 # Make the workspace
 catkin_make -DCMAKE_BUILD_TYPE=Release
-
 set +v
 
 ######################################
@@ -66,7 +64,6 @@ set +v
 
 # Get the right setup for the shell
 source $WSDIR/devel/setup.$SHELL_EXTENTION
-
 # Move back to the original position
 cd - > /dev/null
 
@@ -75,6 +72,8 @@ echo -e "\n\n"
 echo "********************************************************"
 echo "*                 INSTALLATION COMPLETED"
 echo "********************************************************"
+echo "*"
+echo "*  Please make sure there are no errors up there."
 echo "*"
 echo "*  To automatically source this workspace, please add"
 echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
