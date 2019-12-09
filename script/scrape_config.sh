@@ -13,13 +13,14 @@ fi
 
 echo -e "\n\n"
 echo "********************************************************"
-echo "*                 STARTING INSTALLATION"
+echo "*                 STARTING SCRAPING"
 echo "********************************************************"
 echo "*"
-echo "*       This may take a while."
+echo "*       Updating the .rosinstall file"
+echo "*       to match your current config."
 echo "*       Please stay close in case of error(s)."
 echo "*"
-echo "*                     - Installation script"
+echo "*                     - Scraping script"
 echo "*                       $(date +(%B %Y))"
 echo "*"
 echo "********************************************************"
@@ -32,32 +33,19 @@ echo -e "\n\n"
 # Get the workspace path
 WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 
-# Source the workspace
-source "$WSDIR/script/setup.sh"
-
 # Move to the workspace
 cd "$WSDIR"
 
-
 ######################################
-## Installation
+## Scrape all packages using wstool and some gawk magics.
 
-set -v
-# Install boostrap dependencies
-sudo apt-get update
-sudo apt-get install -y python-rosdep python-wstool gawk
+# Get the new list of packages.
+wstool scrape -t src
 
-# Initialise rosdep database
-sudo rosdep init
-
-# wstool init src
-wstool update -t src
-rosdep update
-rosdep install --from-paths src --ignore-src -r -y
-
-# Make the workspace
-catkin_make -DCMAKE_BUILD_TYPE=Release
-set +v
+# Extract the branch name and add it to the .rosinnstall file.
+wstool info -t src --data-only > /tmp/sara_install_ws
+gawk '/git/ {print "- "$2":\n local-name: "$1"\n uri: https://"$NF"\n version: "$3}' /tmp/sara_install_ws > src/.rosinstall
+rm /tmp/sara_install_ws
 
 ######################################
 ## End
@@ -70,14 +58,13 @@ cd - > /dev/null
 
 echo -e "\n\n"
 echo "********************************************************"
-echo "*                 INSTALLATION COMPLETED"
+echo "*                 SCRAPING COMPLETED"
 echo "********************************************************"
 echo "*"
 echo "*  Please make sure there are no errors up there."
+echo "*  You can check the .rosinstall file to be sure."
 echo "*"
-echo "*  To automatically source this workspace, please add"
-echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
-echo "*    source $WSDIR/script/setup.sh"
+echo "*  Remember to commit your configuration."
 echo "*"
 echo "********************************************************"
 echo -e "\n\n"

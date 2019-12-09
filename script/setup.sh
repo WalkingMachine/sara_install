@@ -46,6 +46,7 @@ alias INSTALL_SARA="source $WSDIR/script/install.sh"
 alias UPDATE_SARA="source $WSDIR/script/update.sh"
 alias STATUS_SARA="source $WSDIR/script/status.sh"
 alias SOURCE_SARA_WORKSPACE="source $WSDIR/script/setup.sh"
+alias SCRAPE_SARA_CONFIG="source $WSDIR/script/scrape_config.sh"
 alias CLEAR_SARA_WORKSPACE="source $WSDIR/script/clear_workspace.sh"
 
 
