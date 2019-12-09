@@ -1,9 +1,9 @@
 # Sara install
 
 ### Repository of rosinstall and install script for easy installation
-This repo is an enveloppe containing a catkin workspace containing most tools needed to work with Sara.
-Going from installation to environment configuration and code version control.
-Note that this is a repo containing a workspace containing repos. This will affect the way you work with your repos.
+This repo contains an enclosed catkin workspace along with tools designed to help you manage the versionning of your custom configuration.
+
+Note that since this is a repo containing a workspace containing repos. This will sligtly affect the way you use git on your packages. See the [Workspace versioning layout](#workspace-versioning-layout) section for details.
 
 ## Table of content
 1. [Recommended tools](#recommended-tools)
@@ -26,15 +26,17 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 1.  Install our version control system, git. ``` sudo apt-get install git ```
 
 ## .rosinstall
-Sara_install make use of a tool called [wstool](https://wiki.ros.org/wstool). This piece of software use a configuration file named [.rosinstall](#src/.rosinstall) within wich we can define the list of packages we need to install. Depending on our needs, we can edit this file to change our configuration.
+Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](#src/.rosinstall) wich define the list of packages required to install your configuration. Depending on our needs, you can edit this file to change your configuration.
 
 ## src
-The src directory is usually the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
+The src directory is the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
 
 ## Workspace versioning layout
-This workspace is special since it is encapsuled within the sara_install git repo. This mean that it's configuration is versionnised and you can switch branches to change configuration. Thouhg, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to les wstool be the main package manager and also maintain a retrocompatibility whith the old manual workflow. Each packages within src will not be touched by sara_install and remain their own individual git repositories.
+This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
+
 ![Versionning layout](https://raw.githubusercontent.com/WalkingMachine/sara_install/complete_rework/WorkspaceLayout.jpg "Versionning layout")
 
+For instance, if you have a custom configuration within your src and want to try another one, you can checkout the new configuration branch without changing the content of your src. You will need to install this new configuration to update your src.
 
 ## Main workflow
 ### First complete installation
@@ -52,21 +54,22 @@ If you want to work on a specific new feature which require a specific set of pa
 
 ### Make modifications
 1. Edit code within the desired packages, create feature branches, commit your changes, push them.
+
    ``` cd src/my_package ```
-   
+
    ``` editing ```
-   
+
    ``` git commit edited_file ```
-   
+
    ``` git push -u origin feature/my_awesome_feature ```
-   
+
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages.
 
 ### Update all packages
 If you need to work with all the latest packages use the update.sh script.
    ``` source script/update.sh ```
-   
+
 ## Troubleshooting
 
 * catkin_make not found
