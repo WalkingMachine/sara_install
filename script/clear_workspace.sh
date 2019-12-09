@@ -8,14 +8,13 @@
 WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 
 # Move to the workspace
-cd "$WSDIR"--install -DCMAKE_BUILD_TYPE=Release
+cd "$WSDIR"
 
 
 ######################################
 ## Update all packages
 
-
-rm -rf src/!(src)
+rm -rf src/!(.rosinstall|.|..)
 
 ######################################
 ## End

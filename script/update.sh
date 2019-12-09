@@ -11,6 +11,20 @@ then
 	exit 0
 fi
 
+echo -e "\n\n"
+echo "********************************************************"
+echo "*                 STARTING UPDATE"
+echo "********************************************************"
+echo "*"
+echo "*       This may take a while."
+echo "*       Please stay close in case of error(s)."
+echo "*"
+echo "*                     - Update script"
+echo "*                       $(date +(%B %Y))"
+echo "*"
+echo "********************************************************"
+echo -e "\n\n"
+
 
 ######################################
 ## Preparation
@@ -22,7 +36,7 @@ WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 source "$WSDIR/script/setup.sh"
 
 # Move to the workspace
-cd "$WSDIR"--install -DCMAKE_BUILD_TYPE=Release
+cd "$WSDIR"
 
 
 ######################################
@@ -41,6 +55,22 @@ set +v
 ######################################
 ## End
 
-source devel/setup.bash
+# Get the right setup for the shell
+source $WSDIR/devel/setup.$SHELL_EXTENTION
 # Move back to the original position
 cd - > /dev/null
+
+
+echo -e "\n\n"
+echo "********************************************************"
+echo "*                 UPDATE COMPLETED"
+echo "********************************************************"
+echo "*"
+echo "*  Please make sure there are no errors up there."
+echo "*"
+echo "*  To automatically source this workspace, please add"
+echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
+echo "*    source $WSDIR/script/setup.sh"
+echo "*"
+echo "********************************************************"
+echo -e "\n\n"
