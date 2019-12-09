@@ -67,8 +67,13 @@ If you want to work on a specific new feature which require a specific set of pa
 1. Use the status.sh script to see all modified packages.
 
 ### Update all packages
-If you need to work with all the latest packages use the update.sh script.
+If you need to work with all the latest packages, use the update.sh script.
    ``` source script/update.sh ```
+
+ ### Scrape the workspace
+ If you need to update the .rosinstall file from your custom configuration, use the scrape_config.sh script.
+    ``` source script/scrape_config.sh ```
+
 
 ## Troubleshooting
 

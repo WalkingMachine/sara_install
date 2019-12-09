@@ -1,4 +1,4 @@
 - git:
-    local-name: sara_msgs
-    uri: https://github.com/walkingmachine/sara_msgs.git
-    version: master
+ local-name: sara_msgs
+ uri: https://github.com/walkingmachine/sara_msgs.git
+ version: master
