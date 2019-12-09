@@ -36,16 +36,25 @@ WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
 # Move to the workspace
 cd "$WSDIR"
 
+
 ######################################
 ## Scrape all packages using wstool and some gawk magics.
 
 # Get the new list of packages.
-wstool scrape -t src
+wstool scrape -y -t src  2> /dev/null
+
 
 # Extract the branch name and add it to the .rosinnstall file.
-wstool info -t src --data-only > /tmp/sara_install_ws
-gawk '/git/ {print "- "$2":\n local-name: "$1"\n uri: https://"$NF"\n version: "$3}' /tmp/sara_install_ws > src/.rosinstall
-rm /tmp/sara_install_ws
+wstool info -t src --data-only | sed 's/\ [A-Z]\ / /' > /tmp/sara_install_ws
+gawk '/git/ {print "- "$2":\n\
+    local-name: "$1"\n\
+    uri: https://"$NF"\n\
+    version: "$3}' /tmp/sara_install_ws > src/.rosinstall
+
+echo "here is a summary of all packages in src:"
+gawk '/git/ {print "    - "$1" ("$3")"}' /tmp/sara_install_ws
+#rm /tmp/sara_install_ws
+
 
 ######################################
 ## End
