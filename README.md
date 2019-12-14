@@ -34,7 +34,7 @@ The src directory is the place where all packages are cloned in a catkin workspa
 ## Workspace versioning layout
 This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
 
-![Versionning layout](https://raw.githubusercontent.com/WalkingMachine/sara_install/complete_rework/WorkspaceLayout.jpg "Versionning layout")
+![layout](WorkspaceLayout.jpg)
 
 For instance, if you have a custom configuration within your src and want to try another one, you can checkout the new configuration branch without changing the content of your src. You will need to install this new configuration to update your src.
 
