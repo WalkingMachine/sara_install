@@ -45,14 +45,30 @@ wstool scrape -y -t src  2> /dev/null
 
 
 # Extract the branch name and add it to the .rosinnstall file.
+if [ "$1" != "commit" ]
+then
+echo "By Branch:"
 wstool info -t src --data-only | sed 's/\ [A-Z]\ / /' > /tmp/sara_install_ws
 gawk '/git/ {print "- "$2":\n\
     local-name: "$1"\n\
     uri: https://"$NF"\n\
     version: "$3}' /tmp/sara_install_ws > src/.rosinstall
 
-echo "here is a summary of all packages in src:"
-gawk '/git/ {print "    - "$1" ("$3")"}' /tmp/sara_install_ws
+    echo "here is a summary of all packages in src:"
+    gawk '/git/ {print "    - "$1" ("$3")"}' /tmp/sara_install_ws
+else
+echo "By commit:"
+wstool info -t src --only=scmtype,localname,revision,uri | tr , \  > /tmp/sara_install_ws
+gawk '/git/ {print "- "$1":\n\
+    local-name: "$2"\n\
+    uri: https://"$4"\n\
+    version: "$3}' /tmp/sara_install_ws > src/.rosinstall
+
+    echo "here is a summary of all packages in src:"
+    gawk '/git/ {print "    - "$2" ("$3")"}' /tmp/sara_install_ws
+
+fi
+
 #rm /tmp/sara_install_ws
 
 
