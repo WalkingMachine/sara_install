@@ -45,7 +45,7 @@ cd "$WSDIR"
 set -v
 # Install boostrap dependencies
 sudo apt-get update
-sudo apt-get install -y python-rosdep python-wstool
+sudo apt-get install -y python-rosdep python-wstool gawk
 
 # Initialise rosdep database
 sudo rosdep init
