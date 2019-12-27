@@ -1,10 +1,10 @@
 # List of files
-- setup.sh
-- install.sh
-- update.sh
-- status.sh
-- scrape_config.sh
-- clear_workspace.sh
+1. [setup.sh](#setupsh)
+1. [install.sh](#installsh)
+1. [update.sh](#updatesh)
+1. [status.sh](#statussh)
+1. [scrape_config.sh](#scrape_configsh)
+1. [clear_workspace.sh](#clear_workspacesh)
 
 # setup.sh
 ### description
