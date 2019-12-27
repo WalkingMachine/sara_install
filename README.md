@@ -38,6 +38,9 @@ This workspace is special since it is encapsulated within the sara_install git r
 
 For instance, if you have a custom configuration within your src and want to try another one, you can checkout the new configuration branch without changing the content of your src. You will need to install this new configuration to update your src.
 
+## List of tools
+The list of tools is available [Here](script/README.md).
+
 ## Main workflow
 ### First complete installation
 If you want to install every packages with their main branches.
