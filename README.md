@@ -34,7 +34,7 @@ The src directory is the place where all packages are cloned in a catkin workspa
 ## Workspace versioning layout
 This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
 
-![layout](WorkspaceLayout.jpg)
+![layout](WorkspaceLayout.png)
 
 For instance, if you have a custom configuration within your src and want to try another one, you can checkout the new configuration branch without changing the content of your src. You will need to install this new configuration to update your src.
 
@@ -55,24 +55,27 @@ If you want to work on a specific new feature which require a specific set of pa
 ### Make modifications
 1. Edit code within the desired packages, create feature branches, commit your changes, push them.
 
-   ``` cd src/my_package ```
-
-   ``` editing ```
-
-   ``` git commit edited_file ```
-
-   ``` git push -u origin feature/my_awesome_feature ```
+```
+cd src/my_package
+editing
+git commit edited_file
+git push -u origin feature/my_awesome_feature
+```
 
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages.
 
 ### Update all packages
 If you need to work with all the latest packages, use the update.sh script.
-   ``` source script/update.sh ```
+```
+source script/update.sh
+```
 
  ### Scrape the workspace
  If you need to update the .rosinstall file from your custom configuration, use the scrape_config.sh script.
-    ``` source script/scrape_config.sh ```
+```
+source script/scrape_config.sh
+```
 
 
 ## Troubleshooting
