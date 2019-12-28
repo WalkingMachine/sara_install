@@ -55,24 +55,27 @@ If you want to work on a specific new feature which require a specific set of pa
 ### Make modifications
 1. Edit code within the desired packages, create feature branches, commit your changes, push them.
 
-   ``` cd src/my_package ```
-
-   ``` editing ```
-
-   ``` git commit edited_file ```
-
-   ``` git push -u origin feature/my_awesome_feature ```
+```
+cd src/my_package
+editing
+git commit edited_file
+git push -u origin feature/my_awesome_feature
+```
 
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages.
 
 ### Update all packages
 If you need to work with all the latest packages, use the update.sh script.
-   ``` source script/update.sh ```
+```
+source script/update.sh
+```
 
  ### Scrape the workspace
  If you need to update the .rosinstall file from your custom configuration, use the scrape_config.sh script.
-    ``` source script/scrape_config.sh ```
+```
+source script/scrape_config.sh
+```
 
 
 ## Troubleshooting
