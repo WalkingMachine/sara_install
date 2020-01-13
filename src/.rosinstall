@@ -22,10 +22,10 @@
     local-name: generic_flexbe_states
     uri: https://github.com/FlexBE/generic_flexbe_states.git
     version: master
-- x:
+- git:
     local-name: gpd
-    uri: https://((github.com/atenpas/gpd.git))
-    version: git
+    uri: https://github.com/WalkingMachine/gpd.git
+    version: fix/package_compilation
 - git:
     local-name: gpg
     uri: https://github.com/atenpas/gpg.git
@@ -102,7 +102,3 @@
     local-name: wm_admitance
     uri: https://github.com/WalkingMachine/wm_admitance.git
     version: master
-- x:
-    local-name: wm_frame_to_box
-    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
-    version: git
