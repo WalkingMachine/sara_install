@@ -17,7 +17,7 @@
 - git:
     local-name: sara_description
     uri: https://github.com/WalkingMachine/sara_description.git
-    version: feature/total_revision
+    version: master
 - git:
     local-name: sara_control
     uri: https://github.com/WalkingMachine/sara_control.git
@@ -102,3 +102,7 @@
     local-name: LED-Visage-Arduino
     uri: https://github.com/WalkingMachine/LED-Visage-Arduino.git
     version: nouvelle_emotion
+- git:
+    local-name: wm_frame_to_box
+    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
+    version: master
