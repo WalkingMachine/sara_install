@@ -29,7 +29,7 @@
 - git:
     local-name: gpd
     uri: https://github.com/WalkingMachine/gpd.git
-    version: fix/package_compilation
+    version: fix/compilation
 - git:
     local-name: gpg
     uri: https://github.com/atenpas/gpg.git
