@@ -41,6 +41,7 @@ cd "$WSDIR"
 ## Scrape all packages using wstool and some gawk magics.
 
 # Get the new list of packages.
+# echo "" > src/.rosinstall
 wstool scrape -y -t src  2> /dev/null
 
 
@@ -48,17 +49,17 @@ wstool scrape -y -t src  2> /dev/null
 if [ "$1" != "commit" ]
 then
 echo "By Branch:"
-wstool info -t src --data-only | sed 's/\ [A-Z]\ / /' > /tmp/sara_install_ws
-gawk '/git/ {print "- "$2":\n\
+wstool info -t src --data-only | sed -r 's/\ [XLVCM][XLVCM]?\ /\ /' | sed 's/([^(]*)/\ /'g | tac > /tmp/sara_install_ws
+gawk 'BEGIN { FS = " " } ; /git/ {print "- "$2":\n\
     local-name: "$1"\n\
-    uri: https://"$NF"\n\
+    uri: https://"$5"\n\
     version: "$3}' /tmp/sara_install_ws > src/.rosinstall
 
     echo "here is a summary of all packages in src:"
-    gawk '/git/ {print "    - "$1" ("$3")"}' /tmp/sara_install_ws
+    gawk 'BEGIN { FS = " " } ; /git/ {print "    - "$1" "$3""}' /tmp/sara_install_ws | column -t
 else
 echo "By commit:"
-wstool info -t src --only=scmtype,localname,revision,uri | tr , \  > /tmp/sara_install_ws
+wstool info -t src --only=scmtype,localname,revision,uri | tr , \  | tac > /tmp/sara_install_ws
 gawk '/git/ {print "- "$1":\n\
     local-name: "$2"\n\
     uri: https://"$4"\n\
