@@ -2,37 +2,30 @@
     local-name: sara_launch
     uri: https://github.com/walkingmachine/sara_launch.git
     version: total_revision
-
 - git:
     local-name: sara_description
     uri: https://github.com/walkingmachine/sara_description.git
     version: feature/total_revision
-
 - git:
     local-name: sara_msgs
     uri: https://github.com/walkingmachine/sara_msgs.git
     version: master
-
 - git:
     local-name: sara_navigation
     uri: https://github.com/walkingmachine/sara_navigation.git
     version: feature/new_navigation
-
 - git:
     local-name: sara_behaviors
     uri: https://github.com/walkingmachine/sara_behaviors.git
-    version: fix/flexbe_new_format
-
+    version: fix/import_format
 - git:
     local-name: wm_tts
     uri: https://github.com/walkingmachine/wm_tts.git
     version: master
-
 - git:
     local-name: flexbe_app
     uri: https://github.com/FlexBE/flexbe_app.git
     version: master
-
 - git:
     local-name: sara_moveit
     uri: https://github.com/WalkingMachine/sara_moveit.git
