@@ -1,8 +1,4 @@
 - git:
-    local-name: wm_frame_to_box
-    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
-    version: fix/compilation
-- git:
     local-name: LED-Visage-Arduino
     uri: https://github.com/WalkingMachine/LED-Visage-Arduino.git
     version: nouvelle_emotion
@@ -13,10 +9,10 @@
 - git:
     local-name: dynamixel_control_hw
     uri: https://github.com/WalkingMachine/dynamixel_control_hw.git
-    version: feature/install_libdynamixel
+    version: feature/histeresis
 - git:
     local-name: flexbe_app
-    uri: https://github.com/ffriese/flexbe_app.git
+    uri: https://github.com/FlexBE/flexbe_app.git
     version: master
 - git:
     local-name: gender-age-classification
@@ -28,16 +24,16 @@
     version: master
 - git:
     local-name: gpd
-    uri: https://github.com/WalkingMachine/gpd.git
-    version: fix/compilation
+    uri: https://github.com/atenpas/gpd.git
+    version: forward
 - git:
     local-name: gpg
     uri: https://github.com/atenpas/gpg.git
     version: master
 - git:
-    local-name: lab_ros_speech_to_text
-    uri: https://github.com/WalkingMachine/lab_ros_speech_to_text.git
-    version: master
+    local-name: jog_arm
+    uri: https://git@github.com:UTNuclearRoboticsPublic/jog_arm.git
+    version: kinetic
 - git:
     local-name: marytts
     uri: https://github.com/marytts/marytts
@@ -48,8 +44,8 @@
     version: master
 - git:
     local-name: odas_ros
-    uri: https://github.com/WalkingMachine/odas_ros.git
-    version: feature/auto_installation
+    uri: https://github.com/introlab/odas_ros.git
+    version: dev
 - git:
     local-name: people
     uri: https://github.com/kdhansen/people.git
@@ -81,7 +77,7 @@
 - git:
     local-name: sara_behaviors
     uri: https://github.com/WalkingMachine/sara_behaviors.git
-    version: merge_master
+    version: update/portes_ouvertes
 - git:
     local-name: sara_control
     uri: https://github.com/WalkingMachine/sara_control.git
@@ -89,7 +85,7 @@
 - git:
     local-name: sara_description
     uri: https://github.com/WalkingMachine/sara_description.git
-    version: master
+    version: lowPolyURDF
 - git:
     local-name: sara_launch
     uri: https://github.com/WalkingMachine/sara_launch.git
@@ -100,9 +96,113 @@
     version: feature/simulation_safe
 - git:
     local-name: sara_msgs
-    uri: https://github.com/walkingmachine/sara_msgs.git
+    uri: https://github.com/WalkingMachine/sara_msgs.git
+    version: feature/entity_pose
+- git:
+    local-name: sara_navigation
+    uri: https://github.com/WalkingMachine/sara_navigation
+    version: map/portes_ouvertes
+- git:
+    local-name: sara_teleop
+    uri: https://github.com/WalkingMachine/sara_teleop
     version: master
+- git:
+    local-name: sara_udev
+    uri: https://github.com/WalkingMachine/sara_udev.git
+    version: feature/add_arduino_mega
+- git:
+    local-name: vizbox
+    uri: https://git@github.com:WalkingMachine/vizbox.git
+    version: feature/allow_from_outside
 - git:
     local-name: wm_admitance
     uri: https://github.com/WalkingMachine/wm_admitance.git
     version: master
+- git:
+    local-name: wm_direction_to_point
+    uri: https://github.com/WalkingMachine/wm_direction_to_point.git
+    version: master
+- git:
+    local-name: wm_entity_tracker
+    uri: https://github.com/WalkingMachine/wm_entity_tracker.git
+    version: feature/PoseInput
+- git:
+    local-name: wm_fake_hardware_interface
+    uri: https://github.com/WalkingMachine/wm_fake_hardware_interface.git
+    version: master
+- git:
+    local-name: wm_frame_to_box
+    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
+    version: master
+- git:
+    local-name: wm_grasp_selection
+    uri: https://git@github.com:WalkingMachine/wm_grasp_selection.git
+    version: master
+- git:
+    local-name: wm_kinova_hardware_interface
+    uri: https://github.com/WalkingMachine/wm_kinova_hardware_interface.git
+    version: feature/better_efficiency
+- git:
+    local-name: wm_lifting-column_hardware_interface
+    uri: https://github.com/WalkingMachine/wm_lifting-column_hardware_interface.git
+    version: feature/self_calibration
+- git:
+    local-name: wm_lifting_column_arduino
+    uri: https://github.com/WalkingMachine/wm_lifting_column_arduino.git
+    version: feature/use_encoder_library
+- git:
+    local-name: wm_mecanum_cmd
+    uri: https://github.com/WalkingMachine/wm_mecanum_cmd
+    version: master
+- git:
+    local-name: wm_nlu
+    uri: https://git@github.com:WalkingMachine/wm_nlu.git
+    version: feature/nlu_receptionist
+- git:
+    local-name: wm_object_segmentation
+    uri: https://git@github.com:WalkingMachine/wm_object_segmentation.git
+    version: feature/no_low_object_publication
+- git:
+    local-name: wm_odometry_feedback
+    uri: https://github.com/WalkingMachine/wm_odometry_feedback.git
+    version: master
+- git:
+    local-name: wm_openpifpaf_ros_wrapper
+    uri: https://github.com/WalkingMachine/wm_openpifpaf_ros_wrapper.git
+    version: feature/LigneDansRVIZ3d
+- git:
+    local-name: wm_pose_classification
+    uri: https://github.com/WalkingMachine/wm_pose_classification.git
+    version: master
+- git:
+    local-name: wm_roboteq_hardware_interface
+    uri: https://github.com/WalkingMachine/wm_roboteq_hardware_interface
+    version: master
+- git:
+    local-name: wm_robotiq_hardware_interface
+    uri: https://github.com/WalkingMachine/wm_robotiq_hardware_interface.git
+    version: feature/moar_force
+- git:
+    local-name: wm_sound_library
+    uri: https://github.com/WalkingMachine/wm_sound_library.git
+    version: master
+- git:
+    local-name: wm_table_segmentation
+    uri: https://git@github.com:WalkingMachine/wm_table_segmentation.git
+    version: feature/publish_table_pose
+- git:
+    local-name: wm_trajectory_manager
+    uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
+    version: master
+- git:
+    local-name: wm_tts
+    uri: https://github.com/WalkingMachine/wm_tts.git
+    version: fix/try_except
+- git:
+    local-name: wonderland
+    uri: https://git@github.com:WalkingMachine/wonderland.git
+    version: master
+- git:
+    local-name: zbar_ros
+    uri: https://github.com/WalkingMachine/zbar_ros.git
+    version: update_fork
