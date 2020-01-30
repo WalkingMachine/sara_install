@@ -14,7 +14,7 @@ cd "$WSDIR"
 ######################################
 ## Update all packages
 
-rm -rf src/!(.rosinstall|.|..)
+rm -rf build devel src/!(.rosinstall|.|..)
 
 ######################################
 ## End
