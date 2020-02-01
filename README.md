@@ -41,15 +41,18 @@ For instance, if you have a custom configuration within your src and want to try
 ## Main workflow
 ### First complete installation
 If you want to install every packages with their main branches.
-1. Clone this repo anywhere ``` git clone https://github.com/WalkingMachine/sara_install.git ```
-1. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
+1. Clone this repo anywhere. Optionally, chose the desired branch. ``` git clone https://github.com/WalkingMachine/sara_install.git [-b <desired_branch>] ```
+1. Source the setup.sh script. ``` source sara_install/script/setup.sh ```
+1. Run the install script ``` INSTALL_SARA``` and pay attention to the screen. There might be prompts for passwords and stuff.
+1. Optionnaly, you can add the ``` source <installation path>/sara_install/script/setup.sh ``` 
 1. Your are now ready to code.
 
 ### Installation for specific development
 If you want to work on a specific new feature which require a specific set of packages.
-1. Clone this repo anywhere ``` git clone https://github.com/WalkingMachine/sara_install.git ```
+1. Install your workspace using the installation steps.
+1. Go into sara_install. ``` cd sara_install ```
 1. Create your development branch.``` git checkout -b config/my_awesome_feature_config ```
-1. Modify the [.rosinstall file](#src/.rosinstall) to set the packages you need.
+1. Modify the [.rosinstall file](#src/.rosinstall) to set the packages you need. ``` EDIT_ROSINSTALL ```
 1. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
 
 ### Make modifications
@@ -63,18 +66,18 @@ git push -u origin feature/my_awesome_feature
 ```
 
 1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
-1. Use the status.sh script to see all modified packages.
+1. Use the status.sh script to see all modified packages. ``` STATUS_SARA ```
 
 ### Update all packages
 If you need to work with all the latest packages, use the update.sh script.
 ```
-source script/update.sh
+UPDATE_SARA
 ```
 
  ### Scrape the workspace
  If you need to update the .rosinstall file from your custom configuration, use the scrape_config.sh script.
 ```
-source script/scrape_config.sh
+SCRAPE_SARA_CONFIG
 ```
 
 
