@@ -56,17 +56,17 @@ gawk 'BEGIN { FS = " " } ; $2=="git" {print "- "$2":\n\
     version: "$3}' /tmp/sara_install_ws > src/.rosinstall
 
     echo "here is a summary of all packages in src:"
-    gawk 'BEGIN { FS = " " } ; /git/ {print "    - "$1" "$3""}' /tmp/sara_install_ws | column -t
+    gawk 'BEGIN { FS = " " } ; $2=="git" {print "    - "$1" "$3""}' /tmp/sara_install_ws | column -t
 else
 echo "By commit:"
 wstool info -t src --only=scmtype,localname,revision,uri | tr , \  | tac > /tmp/sara_install_ws
-gawk '/git/ {print "- "$1":\n\
+gawk '$2=="git" {print "- "$1":\n\
     local-name: "$2"\n\
     uri: https://"$4"\n\
     version: "$3}' /tmp/sara_install_ws > src/.rosinstall
 
     echo "here is a summary of all packages in src:"
-    gawk '/git/ {print "    - "$2" ("$3")"}' /tmp/sara_install_ws
+    gawk '$2=="git" {print "    - "$2" ("$3")"}' /tmp/sara_install_ws
 
 fi
 
