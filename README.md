@@ -26,13 +26,13 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 1.  Install our version control system, git. ``` sudo apt-get install git ```
 
 ## .rosinstall
-Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](#src/.rosinstall) wich define the list of packages required to install your configuration. Depending on our needs, you can edit this file to change your configuration.
+Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](src/.rosinstall) wich define the list of packages required to install your configuration. Depending on our needs, you can edit this file to change your configuration.
 
 ## src
 The src directory is the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
 
 ## Workspace versioning layout
-This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](#.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
+This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
 
 ![layout](WorkspaceLayout.png)
 
@@ -41,10 +41,14 @@ For instance, if you have a custom configuration within your src and want to try
 ## Main workflow
 ### First complete installation
 If you want to install every packages with their main branches.
-1. Clone this repo anywhere. Optionally, chose the desired branch. ``` git clone https://github.com/WalkingMachine/sara_install.git [-b <desired_branch>] ```
+1. Clone this repo anywhere. Optionally, chose the desired branch.``` git clone https://github.com/WalkingMachine/sara_install.git [-b <desired_branch>] ```
+   The following branches are recomended:
+   - ```config/sara_kinetic``` for installing the full sara workspace.
+   - ```config/simulation_kinetic``` fr a simulation based configuration.
+   - ```master``` is the default. It barely contains anything.
 1. Source the setup.sh script. ``` source sara_install/script/setup.sh ```
 1. Run the install script ``` INSTALL_SARA``` and pay attention to the screen. There might be prompts for passwords and stuff.
-1. Optionnaly, you can add the ``` source <installation path>/sara_install/script/setup.sh ``` 
+1. Optionnaly, you can add the following line to your ```~/.bashrc```: ``` source <installation path>/sara_install/script/setup.sh ``` Make sure to replace the ```<installation path>``` with the path to sara_install.
 1. Your are now ready to code.
 
 ### Installation for specific development
@@ -52,7 +56,7 @@ If you want to work on a specific new feature which require a specific set of pa
 1. Install your workspace using the installation steps.
 1. Go into sara_install. ``` cd sara_install ```
 1. Create your development branch.``` git checkout -b config/my_awesome_feature_config ```
-1. Modify the [.rosinstall file](#src/.rosinstall) to set the packages you need. ``` EDIT_ROSINSTALL ```
+1. Modify the [.rosinstall file](src/.rosinstall) to set the packages you need. ``` EDIT_ROSINSTALL ```
 1. Run the install script ``` ./sara_install/script/install.sh``` and pay attention to the screen. There might be prompts for passwords and stuff.
 
 ### Make modifications
@@ -65,8 +69,9 @@ git commit edited_file
 git push -u origin feature/my_awesome_feature
 ```
 
-1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](#src/.rosinstall) accordingly to match the version/branch.
+1. If you need to create a new branch on a package, make sure to also change the [.rosinstall file](src/.rosinstall) accordingly to match the version/branch.
 1. Use the status.sh script to see all modified packages. ``` STATUS_SARA ```
+1. You can also [scrape the workspace](#scrape-the-workspace) to take a snapshot of your current configuration.
 
 ### Update all packages
 If you need to work with all the latest packages, use the update.sh script.
@@ -80,10 +85,13 @@ UPDATE_SARA
 SCRAPE_SARA_CONFIG
 ```
 
+### List of functions
+A full list of functions is available [here](script/).
 
 ## Troubleshooting
 
 * catkin_make not found
   1. Close the terminal and reopen it.
 * Build error, finished before reaching [100%]
-  1. Look for indacation of missing packages. Install them if you can and create a issue mentionning the error on [the issue tracker](https://github.com/WalkingMachine/sara_install/issues).
+  1. Look for indication of missing packages. Install them if you can and create a issue mentionning the error on [the issue tracker](https://github.com/WalkingMachine/sara_install/issues).
+ 
