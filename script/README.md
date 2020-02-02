@@ -61,4 +61,4 @@ Delete all packages in the workspace.
 ### description
 Use catkin to build the workspace.
 ### usage
-1. ```CATKIN_MAKE```
+1. ```CATKIN_MAKE_SARA```
