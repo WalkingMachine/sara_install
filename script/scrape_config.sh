@@ -49,7 +49,7 @@ wstool scrape -y -t src  2> /dev/null
 if [ "$1" != "commit" ]
 then
 echo "By Branch:"
-wstool info -t src --data-only | sed -r 's/\ [XLVCM][XLVCM]?\ /\ /' | sed 's/([^(]*)/\ /'g | tac > /tmp/sara_install_ws
+wstool info -t src --data-only | sed -r 's/\ [xXLVCM][XLVCM]?\ /\ /' | sed 's/([^(]*)/\ /'g | tac > /tmp/sara_install_ws
 gawk 'BEGIN { FS = " " } ; /git/ {print "- "$2":\n\
     local-name: "$1"\n\
     uri: https://"$5"\n\

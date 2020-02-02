@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ######################################
 ## Validation
 
@@ -12,16 +13,18 @@ fi
 
 echo -e "\n\n"
 echo "********************************************************"
-echo "*                 STATUS REPORT"
+echo "*                 STARTING CATKIN_MAKE"
 echo "********************************************************"
 echo "*"
-echo "*    Using wstool info and wstool status."
+echo "*       This may take a while."
+echo "*       Please stay close in case of error(s)."
 echo "*"
-echo "*                     - Status script"
+echo "*                     - Catkin_make script"
 echo "*                       $(date +(%B %Y))"
 echo "*"
 echo "********************************************************"
 echo -e "\n\n"
+
 
 ######################################
 ## Preparation
@@ -35,32 +38,28 @@ source "$WSDIR/script/setup.sh"
 # Move to the workspace
 cd "$WSDIR"
 
+
 ######################################
-## Status report
+## Update all packages
 
-echo "*********  wstool info  *****************"
-echo "*"
-echo "*    The Status (S) column shows"
-echo "*      x  for missing"
-echo "*      L  for uncommited (local) changes"
-echo "*      V  for difference in version and/or remote URI"
-echo "*      C  for difference in local and remote versions"
-echo "*      M  for modified"
-echo "*"
-wstool info -s -t src --fetch -u 2>/dev/null | sed 's/^/*    /'
-echo "*"
-echo "*"
-echo -e "*****************************************\n\n"
+# Make the workspace
+catkin_make -DCMAKE_BUILD_TYPE=Release
 
-echo "*********  wstool status  ***************"
-echo "*"
-wstool status -t src -u 2>/dev/null | sed 's/^/*    /'
-echo "*"
-echo "*"
-echo -e "*****************************************\n\n"
 ######################################
-
 ## End
 
+# Get the right setup for the shell
+source $WSDIR/devel/setup.$SHELL_EXTENTION
 # Move back to the original position
 cd - > /dev/null
+
+
+echo -e "\n\n"
+echo "********************************************************"
+echo "*                 CATKIN_MAKE COMPLETED"
+echo "********************************************************"
+echo "*"
+echo "*  Please make sure there are no errors up there."
+echo "*"
+echo "********************************************************"
+echo -e "\n\n"
