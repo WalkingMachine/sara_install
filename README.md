@@ -61,7 +61,7 @@ If you want to install every packages with their main branches.
 cd src/my_package
 editing
 git commit edited_file
-git push -u origin feature/my_awesome_feature
+git push -u origin feature/<my_awesome_feature>
 ```
 
 ### Make custom configuration
@@ -71,7 +71,7 @@ To officialise your custom configuration, follow these steps:
 1. Use ``` SCRAPE_SARA_CONFIG ``` to take a snapshot of your current configuration.
 1. ``` git checkout -b config/<my_awesome_config> ```
 1. ``` git commit src/.rosinstall ```
-1. ``` git push -u origin config/<my_awesome_config ```
+1. ``` git push -u origin config/<my_awesome_config> ```
 
 ### Update all packages
 If you need to work with all the latest packages, use the update.sh script.
