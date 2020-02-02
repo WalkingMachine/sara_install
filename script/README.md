@@ -5,6 +5,7 @@
 1. [status.sh](#statussh)
 1. [scrape_config.sh](#scrape_configsh)
 1. [clear_workspace.sh](#clear_workspacesh)
+1. [catkin_make.sh](#catkin_make)
 
 # setup.sh
 ### description
@@ -16,6 +17,8 @@ This script will setup your environment to work with this workspace. Among other
 4. SOURCE_SARA_WORKSPACE
 5. SCRAPE_SARA_CONFIG
 6. CLEAR_SARA_WORKSPACE
+7. CATKIN_MAKE
+8. EDIT_ROSINSTALL
 
 ### usage
 1. ```source setup.sh``` source this workspace.
@@ -53,3 +56,9 @@ list all installed repos at their current commits. This effectively "lock" the c
 Delete all packages in the workspace.
 ### usage
 1. ```CLEAR_SARA_WORKSPACE```
+
+# catkin_make.sh
+### description
+Use catkin to build the workspace.
+### usage
+1. ```CATKIN_MAKE```
