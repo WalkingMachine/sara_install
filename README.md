@@ -1,9 +1,9 @@
 # Sara install
 
 ### Repository of rosinstall and install script for easy installation
-This repo contains an enclosed catkin workspace along with tools designed to help you manage the versionning of your custom configuration.
+This repo contains an enclosed catkin workspace along with tools designed to help you manage the versioning of your custom configuration.
 
-Note that since this is a repo containing a workspace containing repos. This will sligtly affect the way you use git on your packages. See the [Workspace versioning layout](#workspace-versioning-layout) section for details.
+Note that since this is a repo containing a workspace containing other repos. This will sligtly affect the way you use git on your packages. See the [Workspace versioning layout](#workspace-versioning-layout) section for details.
 
 ## Table of content
 1. [Recommended tools](#recommended-tools)
@@ -16,7 +16,7 @@ Note that since this is a repo containing a workspace containing repos. This wil
 1. [Troubleshooting](#troubleshooting)
 
 ## Recommended tools
-These tool are recommended by Walking Machine to work on Sara. Those are only mere recomendation. You are invited to use your prefered IDE (except visual studio. Yerk!).
+These tool are recommended by Walking Machine to work on Sara. Those are only mere recommendation. You are invited to use your prefered IDE (except visual studio. Yerk! :P ).
 1. atom
 1. pycharm
 1. clion
@@ -27,28 +27,29 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 1.  git. ``` sudo apt-get install git ```
 
 ## .rosinstall
-Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](src/.rosinstall) wich define the list of packages required to install your configuration. Depending on our needs, you can edit this file to change your configuration.
+Sara_install uses [wstool](https://wiki.ros.org/wstool). This piece of software uses a configuration file named [.rosinstall](src/.rosinstall) which define the list of packages required to install your configuration. Depending on your needs, you can edit this file to change your configuration.
 
 ## src
 The src directory is the place where all packages are cloned in a catkin workspace. Sara_install is no exception to this rule. The difference is that the packages within src can be managed by wstool.
 
 ## Workspace versioning layout
-This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionnised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
+This workspace is special since it is encapsulated within the sara_install git repo. This means that it's configuration is versionised and you can switch branches to change configuration. Though, you need to keep in mind that the [src directory](#src) is purposely ignored by sara_install. [See .gitignore](.gitignore). This is to let wstool be the main package manager and also to maintain retrocompatibility whith the old manual workflow. Each packages within src won't be modified by sara_install. They remain their own individual git repositories.
 
 ![layout](WorkspaceLayout.png)
 
 For instance, if you have a custom configuration within your src and want to try another one, you can checkout the new configuration branch without changing the content of your src. You will need to install this new configuration to update your src.
 
 ## Main configurations
-The Following branches contains the most supported configurations. You can choose one of them to start your work.
+Depending on waht you want installed, you can checkout one of these specific branches for the most supported configurations.: 
 1. ```config/sara_kinetic``` for installing the full sara workspace.
-1. ```config/simulation_kinetic``` fr a simulation based configuration.
+1. ```config/simulation_kinetic``` for a simulation based configuration.
 1. ```master``` is the default. It barely contains anything. Perfect for a minimalistic test.
+
 
 ## Main workflow
 ### First installation
 If you want to install every packages with their main branches.
-1. Clone this repo anywhere. Optionally, chose the desired branch.``` git clone https://github.com/WalkingMachine/sara_install.git [-b <desired_branch>] ``` See [Main configurations](#main-configurations) for a list of default branches.
+1. Clone this repo anywhere. Optionally, choose the desired branch.``` git clone https://github.com/WalkingMachine/sara_install.git [-b <desired_branch>] ``` See [Main configurations](#main-configurations) for a list of default branches.
 1. Source the setup.sh script. ``` source sara_install/script/setup.sh ```
 1. Run the install script ``` INSTALL_SARA``` and pay attention to the screen. There might be prompts for passwords and stuff.
 1. Optionnaly, you can add the following line to your ```~/.bashrc```: ``` source <installation path>/sara_install/script/setup.sh ``` Make sure to replace the ```<installation path>``` with the path to sara_install.
@@ -59,7 +60,12 @@ If you want to install every packages with their main branches.
 
 ```
 cd src/my_package
+git pull
 editing
+# To check that you really are on master
+git status 
+# To go in a newly created branch
+git checkout -b feature/<my_awesome_feature>
 git commit edited_file
 git push -u origin feature/<my_awesome_feature>
 ```
@@ -93,5 +99,5 @@ A full list of functions is available [here](script/).
 * catkin_make not found
   1. Close the terminal and reopen it.
 * Build error, finished before reaching [100%]
-  1. Look for indication of missing packages. Install them if you can and create a issue mentionning the error on [the issue tracker](https://github.com/WalkingMachine/sara_install/issues).
+  1. Look for indication of missing packages. Install them if you can and create a issue mentioning the error on [the issue tracker](https://github.com/WalkingMachine/sara_install/issues).
  
