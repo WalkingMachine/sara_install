@@ -23,7 +23,7 @@ These tool are recommended by Walking Machine to work on Sara. Those are only me
 
 ## Requirements
 1. [Ubuntu 16.04 LTS](http://releases.ubuntu.com/16.04/)
-1. Install [ROS Kinetic for Ubuntu](https://wiki.ros.org/kinetic/Installation/Ubuntu) by following all steps up to 1.7. The tutorials are good for learners but not needed for Sara.
+1. Install [ROS Kinetic for Ubuntu](https://wiki.ros.org/kinetic/Installation/Ubuntu) by following all steps up to 1.7. After completing these steps you can continue with the tutorials which are good for learners. Please note that these tutorial are for personal learning only and are not required for nor are used on SARA. For experimented users you can simply install ROS and skip the tutorial.
 1.  git. ``` sudo apt-get install git ```
 
 ## .rosinstall
