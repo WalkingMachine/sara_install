@@ -104,8 +104,8 @@
     version: fix/kinova_udev
 - git:
     local-name: vizbox
-    uri: https://git@github.com:WalkingMachine/vizbox.git
-    version: feature/allow_from_outside
+    uri: https://github.com/WalkingMachine/vizbox.git
+    version: master
 - git:
     local-name: wm_admitance
     uri: https://github.com/WalkingMachine/wm_admitance.git
@@ -128,7 +128,7 @@
     version: master
 - git:
     local-name: wm_grasp_selection
-    uri: https://git@github.com:WalkingMachine/wm_grasp_selection.git
+    uri: https://github.com/WalkingMachine/wm_grasp_selection.git
     version: master
 - git:
     local-name: wm_kinova_hardware_interface
@@ -148,11 +148,11 @@
     version: master
 - git:
     local-name: wm_nlu
-    uri: https://git@github.com:WalkingMachine/wm_nlu.git
+    uri: https://github.com/WalkingMachine/wm_nlu.git
     version: feature/nlu_receptionist
 - git:
     local-name: wm_object_segmentation
-    uri: https://git@github.com:WalkingMachine/wm_object_segmentation.git
+    uri: https://github.com/WalkingMachine/wm_object_segmentation.git
     version: feature/no_low_object_publication
 - git:
     local-name: wm_odometry_feedback
@@ -180,8 +180,8 @@
     version: master
 - git:
     local-name: wm_table_segmentation
-    uri: https://git@github.com:WalkingMachine/wm_table_segmentation.git
-    version: feature/publish_table_pose
+    uri: https://github.com/WalkingMachine/wm_table_segmentation.git
+    version: master
 - git:
     local-name: wm_trajectory_manager
     uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
@@ -192,7 +192,7 @@
     version: fix/try_except
 - git:
     local-name: wonderland
-    uri: https://git@github.com:WalkingMachine/wonderland.git
+    uri: https://github.com/WalkingMachine/wonderland.git
     version: master
 - git:
     local-name: zbar_ros
