@@ -38,6 +38,11 @@ source "$WSDIR/script/setup.sh"
 # Move to the workspace
 cd "$WSDIR"
 
+######################################
+## Remove extra repos
+
+bash -c "source script/_delete_extra_packages.sh"
+
 
 ######################################
 ## Installation
