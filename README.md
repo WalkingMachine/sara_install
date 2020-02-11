@@ -13,6 +13,7 @@ Note that since this is a repo containing a workspace containing other repos. Th
 1. [Workspace versioning layout](#workspace-versioning-layout)
 1. [Main configurations](#main-configurations)
 1. [Main workflow](#main-workflow)
+1. [Branch nomenclature](#branch-nomenclature)
 1. [Troubleshooting](#troubleshooting)
 
 ## Recommended tools
@@ -93,6 +94,14 @@ SCRAPE_SARA_CONFIG
 
 ### List of functions
 A full list of functions is available [here](script/).
+
+### Branch nomenclature
+Here is a list of namespaces we use to define our branches names:
+1. Official branches used in competition: ```config/...```
+1. When developping a new feature on a package: ```dev_config/<package_name>/...```
+1. To perform tests using a specific set of packages or to test a bugfix: ```test_config/<package_name>/...```
+1. When developping a new feature for sara_install itself: ```feature/...```
+1. When making a fix for a bug in sara_install itself: ```fix/...```
 
 ## Troubleshooting
 
