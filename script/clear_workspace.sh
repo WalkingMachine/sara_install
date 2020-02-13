@@ -5,7 +5,7 @@
 ## Preparation
 
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+WSDIR="${$(readlink -f ${0%/*})//\/script/}"
 
 # Move to the workspace
 cd "$WSDIR"
