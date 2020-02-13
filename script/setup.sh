@@ -21,7 +21,8 @@ else
 fi
 
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+WSDIR="${$(readlink -f ${0%/*})//\/script/}"
+echo $WSDIR
 
 # Getting the distros
 export ROS_DISTRO=""
