@@ -30,19 +30,13 @@ echo -e "\n\n"
 ## Preparation
 
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+WSDIR="${$(readlink -f ${0%/*})//\/script/}"
 
 # Source the workspace
 source "$WSDIR/script/setup.sh"
 
 # Move to the workspace
 cd "$WSDIR"
-
-######################################
-## Remove extra repos
-
-bash -c "source script/_delete_extra_packages.sh"
-
 
 ######################################
 ## Installation
