@@ -12,9 +12,15 @@ cd "$WSDIR"
 
 
 ######################################
-## Update all packages
+## Remove all packages
 
-rm -rf build devel src/!(.rosinstall|.|..)
+mv src/.rosinstall ./
+# "safe" rm in 2 steps : first the content, then the empty folders
+mv build/ devel/ src/ ~/.local/share/Trash/ > /dev/null
+mv build/ devel/ src/ ~/.local/share/Trash/ > /dev/null
+
+mkdir src
+mv .rosinstall src
 
 ######################################
 ## End
