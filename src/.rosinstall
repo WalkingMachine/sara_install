@@ -61,4 +61,15 @@
 - git:
     local-name: wm_tts
     uri: https://github.com/walkingmachine/wm_tts.git
+- git:
+    local-name: darknet_ros
+    uri: https://github.com/leggedrobotics/darknet_ros.git
+    version: master
+- git:
+    local-name: wm_frame_to_box
+    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
+    version: master
+- git:
+    local-name: wm_darknet_ros_3d_wrapper
+    uri: https://github.com/WalkingMachine/wm_darknet_ros_3d_wrapper.git
     version: master
