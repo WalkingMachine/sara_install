@@ -27,6 +27,10 @@
     uri: https://github.com/walkingmachine/sara_navigation.git
     version: feature/new_navigation
 - git:
+    local-name: sara_teleop
+    uri: https://github.com/WalkingMachine/sara_teleop.git
+    version: master
+- git:
     local-name: wm_trajectory_manager
     uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
     version: feature/auto_installation
