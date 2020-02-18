@@ -37,7 +37,7 @@
 - git:
     local-name: wm_direction_to_point
     uri: https://github.com/WalkingMachine/wm_direction_to_point.git
-    version: master
+    version: feature/launchfile
 - git:
     local-name: wm_entity_tracker
     uri: https://github.com/WalkingMachine/wm_entity_tracker.git
