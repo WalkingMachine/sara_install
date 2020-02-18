@@ -3,6 +3,10 @@
     uri: https://github.com/FlexBE/flexbe_app.git
     version: master
 - git:
+    local-name: ros-face-recognition
+    uri: https://github.com/WalkingMachine/ros-face-recognition.git
+    version: feature/installation
+- git:
     local-name: sara_behaviors
     uri: https://github.com/walkingmachine/sara_behaviors.git
     version: fix/import_format
@@ -29,6 +33,22 @@
 - git:
     local-name: sara_teleop
     uri: https://github.com/WalkingMachine/sara_teleop.git
+    version: master
+- git:
+    local-name: wm_direction_to_point
+    uri: https://github.com/WalkingMachine/wm_direction_to_point.git
+    version: master
+- git:
+    local-name: wm_entity_tracker
+    uri: https://github.com/WalkingMachine/wm_entity_tracker.git
+    version: master
+- git:
+    local-name: wm_object_segmentation
+    uri: https://github.com/WalkingMachine/wm_object_segmentation.git
+    version: feature/distanceMax
+- git:
+    local-name: wm_table_segmentation
+    uri: https://github.com/WalkingMachine/wm_table_segmentation.git
     version: master
 - git:
     local-name: wm_trajectory_manager
