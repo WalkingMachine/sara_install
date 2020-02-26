@@ -79,9 +79,13 @@
     uri: https://github.com/WalkingMachine/sara_description.git
     version: master
 - git:
+    local-name: sara_hosts
+    uri: https://github.com/WalkingMachine/sara_hosts.git
+    version: update/hostlist
+- git:
     local-name: sara_launch
     uri: https://github.com/WalkingMachine/sara_launch.git
-    version: feature/use_new_navigation
+    version: total_revision
 - git:
     local-name: sara_moveit
     uri: https://github.com/WalkingMachine/sara_moveit.git
@@ -113,7 +117,7 @@
 - git:
     local-name: wm_direction_to_point
     uri: https://github.com/WalkingMachine/wm_direction_to_point.git
-    version: master
+    version: feature/launchfile
 - git:
     local-name: wm_entity_tracker
     uri: https://github.com/WalkingMachine/wm_entity_tracker.git
