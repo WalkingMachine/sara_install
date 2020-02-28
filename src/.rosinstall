@@ -69,7 +69,7 @@
 - git:
     local-name: sara_behaviors
     uri: https://github.com/WalkingMachine/sara_behaviors.git
-    version: update/portes_ouvertes
+    version: master
 - git:
     local-name: sara_control
     uri: https://github.com/WalkingMachine/sara_control.git
@@ -77,11 +77,15 @@
 - git:
     local-name: sara_description
     uri: https://github.com/WalkingMachine/sara_description.git
-    version: lowPolyURDF
+    version: master
+- git:
+    local-name: sara_hosts
+    uri: https://github.com/WalkingMachine/sara_hosts.git
+    version: update/hostlist
 - git:
     local-name: sara_launch
     uri: https://github.com/WalkingMachine/sara_launch.git
-    version: feature/use_new_navigation
+    version: total_revision
 - git:
     local-name: sara_moveit
     uri: https://github.com/WalkingMachine/sara_moveit.git
@@ -89,7 +93,7 @@
 - git:
     local-name: sara_msgs
     uri: https://github.com/WalkingMachine/sara_msgs.git
-    version: feature/entity_pose
+    version: master
 - git:
     local-name: sara_navigation
     uri: https://github.com/WalkingMachine/sara_navigation
@@ -104,8 +108,8 @@
     version: fix/kinova_udev
 - git:
     local-name: vizbox
-    uri: https://git@github.com:WalkingMachine/vizbox.git
-    version: feature/allow_from_outside
+    uri: https://github.com/WalkingMachine/vizbox.git
+    version: master
 - git:
     local-name: wm_admitance
     uri: https://github.com/WalkingMachine/wm_admitance.git
@@ -113,7 +117,7 @@
 - git:
     local-name: wm_direction_to_point
     uri: https://github.com/WalkingMachine/wm_direction_to_point.git
-    version: master
+    version: feature/launchfile
 - git:
     local-name: wm_entity_tracker
     uri: https://github.com/WalkingMachine/wm_entity_tracker.git
@@ -128,7 +132,7 @@
     version: master
 - git:
     local-name: wm_grasp_selection
-    uri: https://git@github.com:WalkingMachine/wm_grasp_selection.git
+    uri: https://github.com/WalkingMachine/wm_grasp_selection.git
     version: master
 - git:
     local-name: wm_kinova_hardware_interface
@@ -141,18 +145,18 @@
 - git:
     local-name: wm_lifting_column_arduino
     uri: https://github.com/WalkingMachine/wm_lifting_column_arduino.git
-    version: feature/use_encoder_library
+    version: master
 - git:
     local-name: wm_mecanum_cmd
     uri: https://github.com/WalkingMachine/wm_mecanum_cmd
     version: master
 - git:
     local-name: wm_nlu
-    uri: https://git@github.com:WalkingMachine/wm_nlu.git
+    uri: https://github.com/WalkingMachine/wm_nlu.git
     version: feature/nlu_receptionist
 - git:
     local-name: wm_object_segmentation
-    uri: https://git@github.com:WalkingMachine/wm_object_segmentation.git
+    uri: https://github.com/WalkingMachine/wm_object_segmentation.git
     version: feature/no_low_object_publication
 - git:
     local-name: wm_odometry_feedback
@@ -180,8 +184,8 @@
     version: master
 - git:
     local-name: wm_table_segmentation
-    uri: https://git@github.com:WalkingMachine/wm_table_segmentation.git
-    version: feature/publish_table_pose
+    uri: https://github.com/WalkingMachine/wm_table_segmentation.git
+    version: master
 - git:
     local-name: wm_trajectory_manager
     uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
@@ -192,7 +196,7 @@
     version: fix/try_except
 - git:
     local-name: wonderland
-    uri: https://git@github.com:WalkingMachine/wonderland.git
+    uri: https://github.com/WalkingMachine/wonderland.git
     version: master
 - git:
     local-name: zbar_ros
