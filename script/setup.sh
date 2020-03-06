@@ -22,7 +22,6 @@ fi
 
 # Get the workspace path
 WSDIR="${$(readlink -f ${0%/*})//\/script/}"
-echo $WSDIR
 
 # Getting the distros
 export ROS_DISTRO=""
