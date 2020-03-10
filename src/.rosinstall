@@ -58,3 +58,11 @@
     local-name: wm_tts
     uri: https://github.com/walkingmachine/wm_tts.git
     version: master
+- git: 
+    local-name: wm_openpifpaf_ros_wrapper
+    uri: https://github.com/WalkingMachine/wm_openpifpaf_ros_wrapper.git 
+    version: feature/LigneDansRVIZ3d
+- git:
+    local-name: wm_pose_classification
+    uri: https://github.com/WalkingMachine/wm_pose_classification.git
+    version: master
