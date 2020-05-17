@@ -1,4 +1,16 @@
 - git:
+    local-name: darknet_ros
+    uri: https://github.com/leggedrobotics/darknet_ros.git
+    version: master
+- git:
+    local-name: sara_hosts
+    uri: https://github.com/WalkingMachine/sara_hosts.git
+    version: config/sara-jetson1
+- git:
+    local-name: sara_launch
+    uri: https://github.com/WalkingMachine/sara_launch.git
+    version: total_revision
+- git:
     local-name: sara_msgs
-    uri: https://github.com/walkingmachine/sara_msgs.git
+    uri: https://github.com/WalkingMachine/sara_msgs.git
     version: master
