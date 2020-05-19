@@ -9,7 +9,7 @@
 - git:
     local-name: sara_behaviors
     uri: https://github.com/walkingmachine/sara_behaviors.git
-    version: fix/import_format
+    version: master
 - git:
     local-name: sara_description
     uri: https://github.com/walkingmachine/sara_description.git
@@ -35,9 +35,13 @@
     uri: https://github.com/WalkingMachine/sara_teleop.git
     version: master
 - git:
+    local-name: saved_trajectories
+    uri: https://github.com/WalkingMachine/saved_trajectories.git
+    version: master
+- git:
     local-name: wm_direction_to_point
     uri: https://github.com/WalkingMachine/wm_direction_to_point.git
-    version: feature/launchfile
+    version: master
 - git:
     local-name: wm_entity_tracker
     uri: https://github.com/WalkingMachine/wm_entity_tracker.git
@@ -53,7 +57,7 @@
 - git:
     local-name: wm_trajectory_manager
     uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
-    version: feature/auto_installation
+    version: master
 - git:
     local-name: wm_tts
     uri: https://github.com/walkingmachine/wm_tts.git
