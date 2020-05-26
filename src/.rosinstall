@@ -25,7 +25,7 @@
 - git:
     local-name: sara_msgs
     uri: https://github.com/walkingmachine/sara_msgs.git
-    version: master
+    version: update/BoundingBox3D
 - git:
     local-name: sara_navigation
     uri: https://github.com/walkingmachine/sara_navigation.git
@@ -45,7 +45,7 @@
 - git:
     local-name: wm_entity_tracker
     uri: https://github.com/WalkingMachine/wm_entity_tracker.git
-    version: master
+    version: update/use_new_sara_msgs
 - git:
     local-name: wm_object_segmentation
     uri: https://github.com/WalkingMachine/wm_object_segmentation.git
@@ -66,10 +66,6 @@
     local-name: darknet_ros
     uri: https://github.com/leggedrobotics/darknet_ros.git
     version: master
-- git:
-    local-name: wm_frame_to_box
-    uri: https://github.com/WalkingMachine/wm_frame_to_box.git
-    version: update/sara_msgs
 - git:
     local-name: wm_darknet_ros_3d_wrapper
     uri: https://github.com/WalkingMachine/wm_darknet_ros_3d_wrapper.git
