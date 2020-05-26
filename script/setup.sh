@@ -12,15 +12,13 @@ then
 fi
 
 # Get the shell extention
-if [[ "$SHELL" == *bash* ]]; then
-    SHELL_EXTENTION=bash
-elif [[ "$SHELL" == *zsh* ]]; then
-    SHELL_EXTENTION=zsh
-else
-    SHELL_EXTENTION=sh
-fi
+SHELL_EXTENTION=$(ps -ocomm= -q $$)
+echo "My shell is: $SHELL_EXTENTION"
 
 # Get the workspace path
+echo "path1: $0"
+echo "path2: $(dirname "$0")"
+
 WSDIR="${$(readlink -f ${0%/*})//\/script/}"
 echo $WSDIR
 
