@@ -12,15 +12,20 @@ then
 fi
 
 # Get the shell extention
-SHELL_EXTENTION=$(ps -ocomm= -q $$)
-echo "My shell is: $SHELL_EXTENTION"
+SHELL_EXTENSION=$(ps -ocomm= -q $$)
 
 # Get the workspace path
-echo "path1: $0"
-echo "path2: $(dirname "$0")"
+if [[ $SHELL_EXTENSION == "bash" ]]
+then
+    WSDIR=$(readlink -f $(dirname $(dirname "${BASH_SOURCE[0]}")))
+elif [[ $SHELL_EXTENSION == "zsh" ]]
+then
+    WSDIR="$(dirname $(readlink -f ${0%/*}))";
+else
+    echo "This shell is not supported. Please use bash or zsh."
+    exit -1 # Not permitted
+fi
 
-WSDIR="${$(readlink -f ${0%/*})//\/script/}"
-echo $WSDIR
 
 # Getting the distros
 export ROS_DISTRO=""
@@ -55,9 +60,9 @@ alias CATKIN_MAKE_SARA="source $WSDIR/script/catkin_make.sh"
 ## Source
 
 # Source ros
-source "/opt/ros/$ROS_DISTRO/setup.$SHELL_EXTENTION"
+source "/opt/ros/$ROS_DISTRO/setup.$SHELL_EXTENSION"
 
 # Source workspace
-if [ -f "$WSDIR/devel/setup.$SHELL_EXTENTION" ] ; then
-    source "$WSDIR/devel/setup.$SHELL_EXTENTION"
+if [ -f "$WSDIR/devel/setup.$SHELL_EXTENSION" ] ; then
+    source "$WSDIR/devel/setup.$SHELL_EXTENSION"
 fi

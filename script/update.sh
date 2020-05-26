@@ -20,7 +20,7 @@ echo "*       This may take a while."
 echo "*       Please stay close in case of error(s)."
 echo "*"
 echo "*                     - Update script"
-echo "*                       $(date +(%B %Y))"
+echo "*                       $(date)"
 echo "*"
 echo "********************************************************"
 echo -e "\n\n"
@@ -29,8 +29,21 @@ echo -e "\n\n"
 ######################################
 ## Preparation
 
+# Get the shell extention
+SHELL_EXTENSION=$(ps -ocomm= -q $$)
+
 # Get the workspace path
-WSDIR="${$(readlink -f ${0%/*})//\/script/}"
+if [[ $SHELL_EXTENSION == "bash" ]]
+then
+    WSDIR=$(readlink -f $(dirname $(dirname "${BASH_SOURCE[0]}")))
+elif [[ $SHELL_EXTENSION == "zsh" ]]
+then
+    WSDIR="$(dirname $(readlink -f ${0%/*}))";
+else
+    echo "This shell is not supported. Please use bash or zsh."
+    exit -1 # Not permitted
+fi
+
 
 # Source the workspace
 source "$WSDIR/script/setup.sh"
@@ -56,7 +69,7 @@ set +v
 ## End
 
 # Get the right setup for the shell
-source $WSDIR/devel/setup.$SHELL_EXTENTION
+source $WSDIR/devel/setup.$SHELL_EXTENSION
 # Move back to the original position
 cd - > /dev/null
 
@@ -69,7 +82,7 @@ echo "*"
 echo "*  Please make sure there are no errors up there."
 echo "*"
 echo "*  To automatically source this workspace, please add"
-echo "*  the following line to your ~/.$SHELL_EXTENTION""rc"
+echo "*  the following line to your ~/.$SHELL_EXTENSION""rc"
 echo "*    source $WSDIR/script/setup.sh"
 echo "*"
 echo "********************************************************"

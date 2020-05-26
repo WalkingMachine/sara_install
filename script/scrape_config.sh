@@ -21,7 +21,7 @@ echo "*       to match your current config."
 echo "*       Please stay close in case of error(s)."
 echo "*"
 echo "*                     - Scraping script"
-echo "*                       $(date +(%B %Y))"
+echo "*                       $(date)"
 echo "*"
 echo "********************************************************"
 echo -e "\n\n"
@@ -30,8 +30,21 @@ echo -e "\n\n"
 ######################################
 ## Preparation
 
+# Get the shell extention
+SHELL_EXTENSION=$(ps -ocomm= -q $$)
+
 # Get the workspace path
-WSDIR="${$(readlink -f ${0%/*})//\/script/}"
+if [[ $SHELL_EXTENSION == "bash" ]]
+then
+    WSDIR=$(readlink -f $(dirname $(dirname "${BASH_SOURCE[0]}")))
+elif [[ $SHELL_EXTENSION == "zsh" ]]
+then
+    WSDIR="$(dirname $(readlink -f ${0%/*}))";
+else
+    echo "This shell is not supported. Please use bash or zsh."
+    exit -1 # Not permitted
+fi
+
 
 # Move to the workspace
 cd "$WSDIR"
@@ -77,7 +90,7 @@ fi
 ## End
 
 # Get the right setup for the shell
-source $WSDIR/devel/setup.$SHELL_EXTENTION
+source $WSDIR/devel/setup.$SHELL_EXTENSION
 # Move back to the original position
 cd - > /dev/null
 
