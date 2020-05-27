@@ -38,6 +38,15 @@ cd "$WSDIR"
 
 
 ######################################
+## Set to ssh if needed
+if [[ $FORCE_SSH == "true" ]]
+then
+	echo "FORCE_SSH is true. Forcing ssh mode."
+	bash -c "source script/_switch_https_ssh.sh -s"
+fi
+
+
+######################################
 ## Scrape all packages using wstool and some gawk magics.
 
 # Get the new list of packages.
@@ -71,6 +80,14 @@ gawk '$2=="git" {print "- "$1":\n\
 fi
 
 #rm /tmp/sara_install_ws
+
+
+######################################
+## Set back to https if needed
+if [[ $FORCE_SSH == "true" ]]
+then
+	bash -c "source script/_switch_https_ssh.sh -h"
+fi
 
 
 ######################################

@@ -38,6 +38,16 @@ source "$WSDIR/script/setup.sh"
 # Move to the workspace
 cd "$WSDIR"
 
+
+######################################
+## Set to ssh if needed
+if [[ $FORCE_SSH == "true" ]]
+then
+	echo "FORCE_SSH is true. Forcing ssh mode."
+	bash -c "source script/_switch_https_ssh.sh -s"
+fi
+
+
 ######################################
 ## Remove extra repos
 
@@ -66,6 +76,15 @@ set +v
 
 ######################################
 ## End
+
+
+######################################
+## Set back to https if needed
+if [[ $FORCE_SSH == "true" ]]
+then
+	bash -c "source script/_switch_https_ssh.sh -h"
+fi
+
 
 # Get the right setup for the shell
 source $WSDIR/devel/setup.$SHELL_EXTENTION
