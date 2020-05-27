@@ -67,3 +67,4 @@ Use catkin to build the workspace.
 To use ssh instead of https, you need to set FORCE_SSH=true.
 To make this permanent, add this line to your .bashrc:
 ```FORCE_SSH=true```
+Note that when forcing ssh, the .rosinstall file will still show https but ssh will be used nevertheless.
