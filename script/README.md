@@ -62,3 +62,8 @@ Delete all packages in the workspace.
 Use catkin to build the workspace.
 ### usage
 1. ```CATKIN_MAKE_SARA```
+
+# Using ssh
+To use ssh instead of https, you need to set FORCE_SSH=true.
+To make this permanent, add this line to your .bashrc:
+```FORCE_SSH=true```
