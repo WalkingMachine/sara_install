@@ -62,3 +62,9 @@ Delete all packages in the workspace.
 Use catkin to build the workspace.
 ### usage
 1. ```CATKIN_MAKE_SARA```
+
+# Using ssh
+To use ssh instead of https, you need to set SARA_FORCE_SSH=true.
+To make this permanent, add this line to your .bashrc:
+```SARA_FORCE_SSH=true```
+Note that when forcing ssh, the .rosinstall file will still show https but ssh will be used nevertheless.
