@@ -3,8 +3,21 @@
 ######################################
 ## Preparation
 
+# Get the shell extention
+SHELL_EXTENSION=$(ps -ocomm= -q $$)
+
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+if [[ $SHELL_EXTENSION == "bash" ]]
+then
+    WSDIR=$(readlink -f $(dirname $(dirname "${BASH_SOURCE[0]}")))
+elif [[ $SHELL_EXTENSION == "zsh" ]]
+then
+    WSDIR="$(dirname $(readlink -f ${0%/*}))";
+else
+    echo "This shell is not supported. Please use bash or zsh."
+    exit -1 # Not permitted
+fi
+
 
 # Move to the workspace
 cd "$WSDIR/src"
