@@ -52,7 +52,7 @@ alias STATUS_SARA="source $WSDIR/script/status.sh"
 alias SOURCE_SARA_WORKSPACE="source $WSDIR/script/setup.sh"
 alias SCRAPE_SARA_CONFIG="source $WSDIR/script/scrape_config.sh"
 alias CLEAR_SARA_WORKSPACE="source $WSDIR/script/clear_workspace.sh"
-alias EDIT_ROSINSTALL="$EDITOR $WSDIR/src/.rosinstall"
+alias EDIT_ROSINSTALL="editor $WSDIR/src/.rosinstall"
 alias CATKIN_MAKE_SARA="source $WSDIR/script/catkin_make.sh"
 
 
