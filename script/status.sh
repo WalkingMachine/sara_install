@@ -51,9 +51,9 @@ cd "$WSDIR"
 
 ######################################
 ## Set to ssh if needed
-if [[ $FORCE_SSH == "true" ]]
+if [[ $SARA_FORCE_SSH == "true" ]]
 then
-	echo "FORCE_SSH is true. Forcing ssh mode."
+	echo "SARA_FORCE_SSH is true. Forcing ssh mode."
 	bash -c "source script/_switch_https_ssh.sh -s"
 fi
 
@@ -86,7 +86,7 @@ echo -e "*****************************************\n\n"
 
 ######################################
 ## Set back to https if needed
-if [[ $FORCE_SSH == "true" ]]
+if [[ $SARA_FORCE_SSH == "true" ]]
 then
 	bash -c "source script/_switch_https_ssh.sh -h"
 fi
