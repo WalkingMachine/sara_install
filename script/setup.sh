@@ -12,16 +12,20 @@ then
 fi
 
 # Get the shell extention
-if [[ "$SHELL" == *bash* ]]; then
-    SHELL_EXTENTION=bash
-elif [[ "$SHELL" == *zsh* ]]; then
-    SHELL_EXTENTION=zsh
-else
-    SHELL_EXTENTION=sh
-fi
+SHELL_EXTENSION=$(ps -ocomm= -q $$)
 
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+if [[ $SHELL_EXTENSION == "bash" ]]
+then
+    WSDIR=$(readlink -f $(dirname $(dirname "${BASH_SOURCE[0]}")))
+elif [[ $SHELL_EXTENSION == "zsh" ]]
+then
+    WSDIR="$(dirname $(readlink -f ${0%/*}))";
+else
+    echo "This shell is not supported. Please use bash or zsh."
+    exit -1 # Not permitted
+fi
+
 
 # Getting the distros
 export ROS_DISTRO=""
@@ -48,7 +52,7 @@ alias STATUS_SARA="source $WSDIR/script/status.sh"
 alias SOURCE_SARA_WORKSPACE="source $WSDIR/script/setup.sh"
 alias SCRAPE_SARA_CONFIG="source $WSDIR/script/scrape_config.sh"
 alias CLEAR_SARA_WORKSPACE="source $WSDIR/script/clear_workspace.sh"
-alias EDIT_ROSINSTALL="$EDITOR $WSDIR/src/.rosinstall"
+alias EDIT_ROSINSTALL="editor $WSDIR/src/.rosinstall"
 alias CATKIN_MAKE_SARA="source $WSDIR/script/catkin_make.sh"
 
 
@@ -56,9 +60,9 @@ alias CATKIN_MAKE_SARA="source $WSDIR/script/catkin_make.sh"
 ## Source
 
 # Source ros
-source "/opt/ros/$ROS_DISTRO/setup.$SHELL_EXTENTION"
+source "/opt/ros/$ROS_DISTRO/setup.$SHELL_EXTENSION"
 
 # Source workspace
-if [ -f "$WSDIR/devel/setup.$SHELL_EXTENTION" ] ; then
-    source "$WSDIR/devel/setup.$SHELL_EXTENTION"
+if [ -f "$WSDIR/devel/setup.$SHELL_EXTENSION" ] ; then
+    source "$WSDIR/devel/setup.$SHELL_EXTENSION"
 fi
