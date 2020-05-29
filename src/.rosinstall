@@ -1,4 +1,64 @@
 - git:
+    local-name: flexbe_app
+    uri: https://github.com/FlexBE/flexbe_app.git
+    version: master
+- git:
+    local-name: ros-face-recognition
+    uri: https://github.com/WalkingMachine/ros-face-recognition.git
+    version: feature/installation
+- git:
+    local-name: sara_behaviors
+    uri: https://github.com/walkingmachine/sara_behaviors.git
+    version: master
+- git:
+    local-name: sara_description
+    uri: https://github.com/walkingmachine/sara_description.git
+    version: feature/total_revision
+- git:
+    local-name: sara_launch
+    uri: https://github.com/walkingmachine/sara_launch.git
+    version: total_revision
+- git:
+    local-name: sara_moveit
+    uri: https://github.com/WalkingMachine/sara_moveit.git
+    version: feature/simulation_safe
+- git:
     local-name: sara_msgs
     uri: https://github.com/walkingmachine/sara_msgs.git
+    version: master
+- git:
+    local-name: sara_navigation
+    uri: https://github.com/walkingmachine/sara_navigation.git
+    version: feature/new_navigation
+- git:
+    local-name: sara_teleop
+    uri: https://github.com/WalkingMachine/sara_teleop.git
+    version: master
+- git:
+    local-name: saved_trajectories
+    uri: https://github.com/WalkingMachine/saved_trajectories.git
+    version: master
+- git:
+    local-name: wm_direction_to_point
+    uri: https://github.com/WalkingMachine/wm_direction_to_point.git
+    version: master
+- git:
+    local-name: wm_entity_tracker
+    uri: https://github.com/WalkingMachine/wm_entity_tracker.git
+    version: master
+- git:
+    local-name: wm_object_segmentation
+    uri: https://github.com/WalkingMachine/wm_object_segmentation.git
+    version: feature/distanceMax
+- git:
+    local-name: wm_table_segmentation
+    uri: https://github.com/WalkingMachine/wm_table_segmentation.git
+    version: master
+- git:
+    local-name: wm_trajectory_manager
+    uri: https://github.com/WalkingMachine/wm_trajectory_manager.git
+    version: master
+- git:
+    local-name: wm_tts
+    uri: https://github.com/walkingmachine/wm_tts.git
     version: master
