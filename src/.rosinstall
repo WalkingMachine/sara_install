@@ -13,11 +13,15 @@
 - git:
     local-name: sara_description
     uri: https://github.com/walkingmachine/sara_description.git
-    version: feature/total_revision
+    version: feature/separate_gazebo
+- git:
+    local-name: sara_gazebo
+    uri: https://github.com/walkingmachine/sara_gazebo.git
+    version: update
 - git:
     local-name: sara_launch
     uri: https://github.com/walkingmachine/sara_launch.git
-    version: total_revision
+    version: feature/sara_gazebo
 - git:
     local-name: sara_moveit
     uri: https://github.com/WalkingMachine/sara_moveit.git
