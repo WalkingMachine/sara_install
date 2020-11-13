@@ -14,14 +14,15 @@ fi
 # Get the shell extention
 if [[ "$SHELL" == *bash* ]]; then
     SHELL_EXTENTION=bash
-elif [[ "$SHELL" == *zsh* ]]; then
-    SHELL_EXTENTION=zsh
+#elif [[ "$SHELL" == *zsh* ]]; then
+#    SHELL_EXTENTION=zsh
 else
     SHELL_EXTENTION=sh
 fi
 
 # Get the workspace path
-WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+# WSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+WSDIR=~/sara_install
 
 # Getting the distros
 export ROS_DISTRO=""
@@ -50,7 +51,6 @@ alias SCRAPE_SARA_CONFIG="source $WSDIR/script/scrape_config.sh"
 alias CLEAR_SARA_WORKSPACE="source $WSDIR/script/clear_workspace.sh"
 alias EDIT_ROSINSTALL="$EDITOR $WSDIR/src/.rosinstall"
 alias CATKIN_MAKE_SARA="source $WSDIR/script/catkin_make.sh"
-
 
 ######################################
 ## Source

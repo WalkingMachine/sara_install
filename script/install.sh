@@ -43,8 +43,8 @@ cd "$WSDIR"
 
 bash -c "source script/_delete_extra_packages.sh"
 
-
-######################################
+echo "after delete_extra_packages"
+#####################################
 ## Installation
 
 set -v
